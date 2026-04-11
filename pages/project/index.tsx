@@ -11,11 +11,13 @@ const Project = () => {
   interface Project {
     title: string
     description: string
+    imageSrc?: string
   }
   const projectList: Project[] = [
     {
       title: 'The Mobile App Landing Page',
       description: 'A landing page for mobile app',
+      imageSrc: '/images/screenshots/mobile-performance.png',
     },
     {
       title: 'The Desktop App Landing Page',
@@ -50,7 +52,6 @@ const Project = () => {
               { label: 'App', value: 'app' },
               { label: 'UI Design', value: 'ui-design' },
               { label: 'Other', value: 'other' },
-              { label: 'Coldstorage', value: 'coldstorage'},
             ]}
           />
         </aside>
@@ -64,6 +65,7 @@ const Project = () => {
                 <ProjectCard
                   title={project.title}
                   description={project.description}
+                  imageSrc={project.imageSrc}
                 />
               </div>
             )
