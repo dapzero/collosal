@@ -9,17 +9,20 @@ import randomString from 'utils/randomString'
 
 const ProjectDetail = () => {
   interface Project {
+    imageSrc?: string
     title: string
     description: string
   }
   const projectList: Project[] = [
     {
-      title: 'Simple Mobile Blog App',
+      title: 'Simple Mobile Blog App', 
       description: 'A blog app on mobile platform',
+      imageSrc: '/images/screenshots/home.png',
     },
     {
       title: 'Realtime Chat App UI Design',
       description: 'A UI design for realtime chat app',
+      imageSrc: '/images/screenshots/home.png',
     },
   ]
   return (
@@ -35,7 +38,13 @@ const ProjectDetail = () => {
       <LineDivider />
       <section className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <aside data-aos="fade-up-right">
-          <LazyCard bottomSquareSize="big" height={400} />
+          <div style={{ aspectRatio: `16/9`, overflow: 'hidden', borderRadius: '0.375rem'}}>
+            <img 
+              src="/images/screenshots/home.png"
+              alt="The Desktop App Landing Page"
+              style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'top' }}
+            />
+          </div>
         </aside>
         <aside className="grid gap-12 place-content-center" data-aos="fade-up-left">
           <Text
@@ -80,6 +89,7 @@ const ProjectDetail = () => {
                 <ProjectCard
                   title={project.title}
                   description={project.description}
+                  imageSrc={project.imageSrc}
                 />
               </div>
             )

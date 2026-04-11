@@ -17,11 +17,11 @@ const ProjectCard = ({
   return (
     <div className="w-full">
       {imageSrc ? (
-        <div style={{ height: height, overflow: 'hidden', borderRadius: '0.375rem' }}>
+        <div style={{ aspectRatio: `16/9`, overflow: 'hidden', borderRadius: '0.375rem' }}>
           <img
             src={imageSrc}
             alt={title}
-            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }}
           />
         </div>
       ) : (

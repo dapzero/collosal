@@ -17,19 +17,23 @@ const Project = () => {
     {
       title: 'The Mobile App Landing Page',
       description: 'A landing page for mobile app',
-      imageSrc: '/images/screenshots/mobile-performance.png',
+      imageSrc: '/images/screenshots/home.png',
     },
     {
       title: 'The Desktop App Landing Page',
       description: 'A landing page for desktop app',
+      imageSrc: '/images/screenshots/home.png',
     },
     {
       title: 'Simple Mobile Blog App',
       description: 'A blog app on mobile platform',
+      imageSrc: '/images/screenshots/home.png',
+      
     },
     {
       title: 'Realtime Chat App UI Design',
       description: 'A UI design for realtime chat app',
+      imageSrc: '/images/development-illustration.svg',
     },
   ]
   return (
