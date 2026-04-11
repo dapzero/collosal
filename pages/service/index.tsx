@@ -2,7 +2,7 @@ import React from 'react'
 import PageTemplate from 'components/templates/PageTemplate'
 import PageSentence from 'components/molecules/PageSentence'
 import LineDivider from 'components/atoms/LineDivider'
-import Image from 'next/image'
+// import Image from 'next/image' #versi sebelummnya
 import SectionSentence from 'components/molecules/SectionSentence'
 import {
   FiArrowUp,
@@ -34,10 +34,9 @@ const Services = () => {
         <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5 ">
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
             <figure className="w-full h-[315px] relative">
-              <Image
+              <img
                 src={'/images/ui-design-illustration.svg'}
-                layout="fill"
-                objectFit="fill"
+                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                 alt='UI Design'
               />
             </figure>
@@ -93,10 +92,9 @@ const Services = () => {
           </aside>
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
             <figure className="w-full h-[450px] relative">
-              <Image
+              <img
                 src={'/images/development-illustration.svg'}
-                layout="fill"
-                objectFit="fill"
+                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                 alt='IDE for development'
               />
             </figure>
@@ -105,10 +103,9 @@ const Services = () => {
         <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5 ">
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
             <figure className="w-full h-[545px] relative">
-              <Image
+              <img
                 src={'/images/maintenance-illustration.svg'}
-                layout="fill"
-                objectFit="fill"
+                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                 alt='server maintenance'
               />
             </figure>

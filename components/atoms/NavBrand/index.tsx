@@ -1,5 +1,5 @@
 import useMobileDeviceDetection from 'hooks/useMobileDetection'
-import Image from 'next/image'
+// import Image from 'next/image' #versi sebelumnya
 import Link from 'next/link'
 import React from 'react'
 
@@ -14,7 +14,12 @@ const NavBrand = () => {
       >
         <Link href={'/'} passHref>
           <div className="w-fit h-fit">
-            <Image src={'/images/brand.svg'} width='135px' height={30} alt='company brand' loading='lazy' />
+            <img 
+              src= {'/images/brand.svg'} 
+              style= {{ width: '135px', height: '100%' }}
+              alt='company brand' 
+              loading='lazy' 
+            />
           </div>
         </Link>
       </div>

@@ -1,5 +1,5 @@
 import Text from 'components/atoms/Text'
-import Image from 'next/image'
+// import Image from 'next/image' #versi sebelummnya
 import React from 'react'
 interface Props {
   avatarSrc: string
@@ -13,15 +13,13 @@ const TestimonialCard = ({ avatarSrc, company, name, testimony }: Props) => {
 
       <div className="space-y-5 flex flex-col items-center text-center">
         <div className="relative w-fit">
-          <Image
+          <img
             src={avatarSrc}
-            width={100}
-            height={100}
-            objectFit="contain"
+            width={120} height={36}
             alt="avatar"
           />
           <div className="absolute bottom-0 right-0">
-            <Image
+            <img
               src={'/images/quote-badge.svg'}
               width={28}
               height={28}

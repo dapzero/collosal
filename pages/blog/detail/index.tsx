@@ -9,7 +9,7 @@ import InputGroup from 'components/molecules/FormGroup/InputGroup'
 import TextAreaGroup from 'components/molecules/FormGroup/TextAreaGroup'
 import PageSentence from 'components/molecules/PageSentence'
 import PageTemplate from 'components/templates/PageTemplate'
-import Image from 'next/image'
+// import Image from 'next/image' #versi sebelummnya
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 import randomString from 'utils/randomString'
@@ -102,12 +102,13 @@ const BlogDetail = () => {
           ref={thumbnailContainer}
           data-aos="fade-up"
         >
-          <Image
+          <img
             src="/images/blog-thumbnail-2.webp"
-            width={thumbnailSize.width}
-            height={thumbnailSize.height}
-            quality={85}
-            objectFit="cover"
+            style={{ 
+              width: thumbnailSize.width,
+              height: thumbnailSize.height,
+              objectFit:'cover',
+            }}
             className="rounded-xl"
             alt="figma"
           />
@@ -139,12 +140,13 @@ const BlogDetail = () => {
           ref={forestContainer}
           data-aos="fade-up"
         >
-          <Image
+          <img
             src="/images/forest.webp"
-            width={forestImageSize.width}
-            height={forestImageSize.height}
-            quality={80}
-            objectFit="cover"
+            style={{ 
+              width: forestImageSize.width,
+              height: forestImageSize.height,
+              objectFit:'cover' 
+            }}
             className="rounded-xl"
             alt="forest"
           />

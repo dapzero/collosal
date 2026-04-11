@@ -1,5 +1,5 @@
 import Text from 'components/atoms/Text'
-import Image from 'next/image'
+// import Image from 'next/image' #versi sebelummnya
 import React, { useEffect, useRef, useState } from 'react'
 interface TeamCardProps {
   imageSrc: string
@@ -28,11 +28,9 @@ const TeamCard = ({ imageSrc, job, name }: TeamCardProps) => {
   return (
     <div className="w-full rounded-md overflow-hidden" ref={container}>
       <div className="w-full relative">
-        <Image
-          width={imageSize.width}
-          height={imageSize.height}
+        <img
           src={imageSrc}
-          quality={80}
+          style={{ width:'100%', height:'100%', objectFit:'contain' }}
           alt="Team Avatar"
         />
       </div>

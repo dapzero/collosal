@@ -50,6 +50,7 @@ const Project = () => {
               { label: 'App', value: 'app' },
               { label: 'UI Design', value: 'ui-design' },
               { label: 'Other', value: 'other' },
+              { label: 'Coldstorage', value: 'coldstorage'},
             ]}
           />
         </aside>
