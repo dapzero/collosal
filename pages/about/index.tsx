@@ -16,7 +16,7 @@ const About = () => {
           <div className="w-full h-[480px] relative">
             <img
               src={'/images/about-illustration.webp'}
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               alt="Programmers when coding in their laptop"
               
             />

@@ -22,7 +22,7 @@ const HowWeWork = () => {
           <div className="w-full h-[410px] relative">
             <img
               src={'/images/discuss-illustration.webp'}
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               alt='Some people discuss'
             />
           </div>
@@ -47,7 +47,7 @@ const HowWeWork = () => {
           <div className="w-full h-[410px] relative">
             <img
               src={'/images/development-illustration-2.svg'}
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               alt='Development'
             />
           </div>
@@ -58,7 +58,7 @@ const HowWeWork = () => {
           <div className="w-full h-[410px] relative">
             <img
               src={'/images/project-asset-illustration.svg'}
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               alt='Project Asset'
             />
           </div>

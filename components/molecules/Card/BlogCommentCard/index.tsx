@@ -17,7 +17,11 @@ const BlogCommentCard = ({
     <div className="w-full pb-12 border-b border-borderLight flex gap-6">
       <div className="">
         <div className="w-[50px] h-[50px] relative">
-          <img src={'/out/images/brand.svg'} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt='Commentator Avatar' />
+          <img 
+            src={avatarSrc} 
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+            alt='Commentator Avatar' 
+          />
         </div>
       </div>
       <div className="space-y-5">

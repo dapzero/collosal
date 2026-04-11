@@ -30,7 +30,7 @@ const TeamCard = ({ imageSrc, job, name }: TeamCardProps) => {
       <div className="w-full relative">
         <img
           src={imageSrc}
-          style={{ width:'100%', height:'100%', objectFit:'fill'}}
+          style={{ width:'100%', height:'100%', objectFit:'contain' }}
           alt="Team Avatar"
         />
       </div>

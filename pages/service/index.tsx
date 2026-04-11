@@ -36,7 +36,7 @@ const Services = () => {
             <figure className="w-full h-[315px] relative">
               <img
                 src={'/images/ui-design-illustration.svg'}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                 alt='UI Design'
               />
             </figure>
@@ -94,7 +94,7 @@ const Services = () => {
             <figure className="w-full h-[450px] relative">
               <img
                 src={'/images/development-illustration.svg'}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                 alt='IDE for development'
               />
             </figure>
@@ -105,7 +105,7 @@ const Services = () => {
             <figure className="w-full h-[545px] relative">
               <img
                 src={'/images/maintenance-illustration.svg'}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                 alt='server maintenance'
               />
             </figure>
