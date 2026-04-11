@@ -1,5 +1,5 @@
 import Text from 'components/atoms/Text'
-import Image from 'next/image'
+// import Image from 'next/image' #versi sebelummnya
 import React, { useEffect, useRef, useState } from 'react'
 interface BlogCardProps {
   thumbnailSrc: string
@@ -40,11 +40,9 @@ const BlogCard = ({
   return (
     <div className="w-full space-y-6" ref={container}>
       <div className="">
-        <Image
-          width={imageSize.width}
-          height={imageSize.height}
+        <img
+          width={120} height={36}
           src={thumbnailSrc}
-          quality={80}
           className='rounded-xl'
           alt='Blog Thumbnail'
         />
@@ -54,7 +52,7 @@ const BlogCard = ({
           <Text textStyle='BlogLead' value={lead} />
       </div>
       <div className="flex gap-5">
-          <Image src={authorAvatarSrc} width={50} height={50} alt="Blog Author Avatar" />
+          <img src={authorAvatarSrc} width={50} height={50} alt="Blog Author Avatar" />
           <div className="">
               <Text textStyle='AuthorNamePreview' value={authorName}  />
               <Text textStyle='BlogMeta' value={`${launchDate} • ${readTime} read`}  />

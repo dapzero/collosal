@@ -5,7 +5,7 @@ import SectionSentence from 'components/molecules/SectionSentence'
 import LogoList from 'components/organisms/LogoList'
 import StatisticList from 'components/organisms/StatisticList'
 import PageTemplate from 'components/templates/PageTemplate'
-import Image from 'next/image'
+// import Image from 'next/image' #versi sebelummnya
 import React from 'react'
 
 const About = () => {
@@ -14,11 +14,9 @@ const About = () => {
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 place-items-center">
         <aside className="w-full" data-aos="fade-down-right">
           <div className="w-full h-[480px] relative">
-            <Image
+            <img
               src={'/images/about-illustration.webp'}
-              layout="fill"
-              objectFit="contain"
-              quality={80}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               alt="Programmers when coding in their laptop"
               
             />

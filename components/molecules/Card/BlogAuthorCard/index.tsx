@@ -1,5 +1,6 @@
+import NavBrand from 'components/atoms/NavBrand'
 import Text from 'components/atoms/Text'
-import Image from 'next/image'
+// import Image from 'next/image' #versi sebelummnya
 import React from 'react'
 import { FiFacebook, FiLinkedin, FiTwitter } from 'react-icons/fi'
 interface BlogAuthorCardProps {
@@ -13,7 +14,7 @@ const BlogAuthorCard = ({ avatarSrc, bio, job, name }: BlogAuthorCardProps) => {
     <div className="w-full rounded-md bg-light p-6 flex flex-col gap-5 md:flex-row lg:gap-10">
       <div className="">
         <div className="relative w-[100px] h-[100px]">
-          <Image src={avatarSrc} layout="fill" objectFit="cover" alt='Author Avatar' />
+          <img src={'/out/images/brand.svg'} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="Author Avatar" />
         </div>
       </div>
       <div className="space-y-6">

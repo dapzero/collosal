@@ -5,7 +5,7 @@ import FeatureCard, {
 } from 'components/molecules/Card/FeatureCard'
 import PageSentence from 'components/molecules/PageSentence'
 import PageTemplate from 'components/templates/PageTemplate'
-import Image from 'next/image'
+// import Image from 'next/image' #versi sebelummnya
 import Link from 'next/link'
 import React from 'react'
 import {
@@ -98,10 +98,9 @@ const ServiceDetail = () => {
       <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5 ">
         <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
           <figure className="w-full h-[450px] relative">
-            <Image
+            <img
               src={'/images/development-illustration.svg'}
-              layout="fill"
-              objectFit="fill"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               alt="IDE that connect to Desktop, Mobile and Web mean multiple platform"
             />
           </figure>

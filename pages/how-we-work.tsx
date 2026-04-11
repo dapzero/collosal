@@ -2,7 +2,7 @@ import LineDivider from 'components/atoms/LineDivider'
 import PageSentence from 'components/molecules/PageSentence'
 import SectionSentence from 'components/molecules/SectionSentence'
 import PageTemplate from 'components/templates/PageTemplate'
-import Image from 'next/image'
+// import Image from 'next/image' #versi sebelummnya
 import React from 'react'
 
 const HowWeWork = () => {
@@ -20,11 +20,9 @@ const HowWeWork = () => {
       <section className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-8 lg:gap-5">
         <aside className="w-full" data-aos="fade-up-right">
           <div className="w-full h-[410px] relative">
-            <Image
+            <img
               src={'/images/discuss-illustration.webp'}
-              quality={100}
-              layout="fill"
-              objectFit="contain"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               alt='Some people discuss'
             />
           </div>
@@ -47,11 +45,9 @@ const HowWeWork = () => {
         </aside>
         <aside className="w-full" data-aos="fade-up-left">
           <div className="w-full h-[410px] relative">
-            <Image
+            <img
               src={'/images/development-illustration-2.svg'}
-              quality={100}
-              layout="fill"
-              objectFit="contain"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               alt='Development'
             />
           </div>
@@ -60,11 +56,9 @@ const HowWeWork = () => {
       <section className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-8 lg:gap-5">
         <aside className="w-full" data-aos="fade-up-right">
           <div className="w-full h-[410px] relative">
-            <Image
+            <img
               src={'/images/project-asset-illustration.svg'}
-              quality={100}
-              layout="fill"
-              objectFit="contain"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               alt='Project Asset'
             />
           </div>
