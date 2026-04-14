@@ -145,7 +145,7 @@ const BlogDetail = () => {
             style={{ 
               width: forestImageSize.width,
               height: forestImageSize.height,
-              objectFit:'cover' 
+              objectFit:'contain' 
             }}
             className="rounded-xl"
             alt="forest"

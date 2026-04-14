@@ -2,136 +2,275 @@ import React from 'react'
 import PageTemplate from 'components/templates/PageTemplate'
 import PageSentence from 'components/molecules/PageSentence'
 import LineDivider from 'components/atoms/LineDivider'
-// import Image from 'next/image' #versi sebelummnya
-import SectionSentence from 'components/molecules/SectionSentence'
-import {
-  FiArrowUp,
-  FiCheckCircle,
-  FiDownload,
-  FiGlobe,
-  FiLayout,
-  FiMonitor,
-  FiRefreshCcw,
-  FiSmartphone,
-} from 'react-icons/fi'
-import SmallCardIcon from 'components/molecules/Card/SmallCardIcon'
-import CardListIcon from 'components/molecules/Card/CardListIcon'
-import TextArrowLink from 'components/molecules/TextArrowLink'
-import IconListItem from 'components/molecules/IconListItem'
-const Services = () => {
+import Text from 'components/atoms/Text'
+import Image from 'next/image'
+
+const EpsSpecifications = [
+  { label: 'Steel Skins', value: 'Prepainted Steel with Corrosion Resistant Alloy (55% Aluminum, 43.5% Zinc and 1.5% Silicone)' },
+  { label: 'Steel Brand', value: 'Bluescope' },
+  { label: 'Coating', value: 'AZ70, AZ100 and AZ100 Antibacterial' },
+  { label: 'Application', value: 'Wall, Ceiling, Door and Roof' },
+  { label: 'Steel Thickness', value: '0.35 BMT and 0.45 BMT' },
+  { label: 'Panel Thickness', value: '50mm, 75mm, 100mm and 150mm' },
+  { label: 'Join System', value: 'Slip Joint' },
+  { label: 'Core', value: 'Expanded Polystyrene (EPS)' },
+  { label: 'Density', value: '12 - 15 kg/m³' },
+  { label: 'Protection', value: 'Fire Retardant and Water Resistant' },
+  { label: 'Width Dimension', value: '1185mm (Wall), 1000mm (Roof)' },
+  { label: 'Length Dimension', value: 'Up to 12000mm/modul' },
+  { label: 'Usage', value: "Clean Room, Laboratory Room, Medicine Warehouse, Modular Operating Theater (MOT), Radiology Room, Prefab Building, Modular Building, Warehouse and Factory Partition, Packaging Room, Sparepart Room, Worker's Mess, Container Office, and many more." },
+]
+
+const PurSpecifications = [
+  { label: 'Steel Skins', value: 'Prepainted Steel with Corrosion Resistant Alloy (55% Aluminum, 43,5% Zinc and 1,5% Silicone).' },
+  { label: 'Steel Brand', value: 'Bluescope' },
+  { label: 'Coating', value: 'AZ70, AZ100 and AZ100 Antibacterial' },
+  { label: 'Application', value: 'Wall, Ceiling, Door and Floor Slab' },
+  { label: 'Steel Thickness', value: '0.45 BMT' },
+  { label: 'Panel Thickness', value: '50mm, 75mm, 100mm and 150mm' },
+  { label: 'Join System', value: 'Slip Joint and Camlock' },
+  { label: 'Core', value: 'Expanded Polyurethane (PU)' },
+  { label: 'Density', value: '43 - 48 kg/m³' },
+  { label: 'Protection', value: 'Fire Retardant and Water Resistant' },
+  { label: 'Width Dimension', value: '1200mm (Wall), 1000mm (Roof)' },
+  { label: 'Length Dimension', value: 'Up to 12000mm/modul' },
+  { label: 'Usage', value: "ABF Room, Cold Storage Room, Chiller Room, Machine Room, Electrical Panel Room, Oven Room, Drying Room, and many more." },
+]
+
+const Service = () => {
   return (
-    <>
-      <PageTemplate title='Service - Collosal'>
-        <section className="grid place-items-center" data-aos="zoom-in-up">
-          <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12">
-            <PageSentence
-              badge="SERVICES"
-              title="We are here to help solve your company's problems"
-            />
+    <PageTemplate title="Product - Collosal">
+      <section className="grid grid-cols-1 place-items-center gap-10 lg:gap-12">
+        <div className="w-full max-w-4xl text-center" data-aos="fade-up">
+          <PageSentence
+            badge="OUR PRODUCTS"
+            title="Premium Insulated Panel Solutions"
+            description="We provide high-quality insulated panels designed for durability, efficiency, and various industrial applications."
+          />
+        </div>
+      </section>
+
+      <LineDivider />
+
+      {/* Insulated EPS Section (Replacing UI Design) */}
+      <section className="w-full flex flex-col gap-10 mt-16 mb-24">
+        <div className="flex flex-col xl:flex-row gap-10" data-aos="fade-up">
+          
+          {/* Left Side: Product Identity, Colors, & Skins */}
+          <div className="w-full xl:w-1/3 flex flex-col gap-6">
+            
+            {/* Title Badge */}
+            <div className="bg-light p-8 rounded-[10px] border border-borderLight shadow-sm">
+              <div className="border-l-4 border-blue-600 pl-4">
+                <Text value="Insulated" textStyle="PricingSubtitle" />
+                <h2 className="text-2xl font-bold text-white mt-1">Expanded Polystyrene (EPS)</h2>
+              </div>
+            </div>
+
+            {/* Product Image Placeholder */}
+            <div className="w-full relative h-[250px] bg-light rounded-[10px] border border-borderLight flex items-center justify-center p-4">
+                <img
+                    src={'/images/EPS-PRODUCT.svg'} // Ganti dengan path gambar produk yang sebenarnya
+                    alt="Insulated EPS Panel"
+                    className="w-full h-full object-contain"
+                />
+            </div>
+
+            {/* Color & Skin Variants */}
+            <div className="bg-light p-8 rounded-[10px] border border-borderLight flex flex-col gap-8">
+              
+              {/* Colors */}
+              <div>
+                <div className="bg-blue-600 text-white text-center py-2 rounded-md font-bold mb-6">
+                  Color
+                </div>
+                <div className="grid grid-cols-3 gap-4 text-center">
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="w-16 h-16 bg-[#FFFFFF] rounded-xl border-4 border-gray-400 flex items-center justify-center text-xs font-bold text-black">AZ70</div>
+                      <Text value="Cotton White" textStyle="PricingDetail" />
+                   </div>
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="w-16 h-16 bg-[#6A6A6A] rounded-xl border-4 border-gray-600 flex items-center justify-center text-xs font-bold text-black">AZ100</div>
+                      <Text value="Ampupu Grey" textStyle="PricingDetail" />
+                   </div>
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="w-16 h-16 bg-[#919BA4] rounded-xl border-4 border-gray-500 flex items-center justify-center text-xs font-bold text-black text-center leading-tight">AZ100</div>
+                      <Text value="Geranium Antibacterial" textStyle="PricingDetail" />
+                   </div>
+                </div>
+                <p className="text-[10px] text-gray-500 text-center mt-5 italic">*Warna hanya sebagai ilustrasi</p>
+              </div>
+
+              {/* Skins */}
+              <div>
+                <div className="bg-blue-600 text-white text-center py-2 rounded-md font-bold mb-6">
+                  Skin Profile
+                </div>
+                <div className="flex justify-center gap-12 text-center">
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="w-20 h-14 bg-blue border-2 border-borderLight rounded-lg flex flex-col justify-center items-center gap-[6px]">
+                        <div className="w-10 h-[2px] bg-gray-400"></div>
+                        <div className="w-10 h-[2px] bg-gray-400"></div>
+                      </div>
+                      <Text value="Flat" textStyle="PricingDetail" />
+                   </div>
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="w-20 h-14 bg-blue border-2 border-borderLight rounded-lg flex flex-col justify-center items-center">
+                        <svg className="w-12 h-6 text-gray-400" viewBox="0 0 48 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="miter">
+                          {/* Top Skin Profile */}
+                          {/* <path d="M 2 4 H 12 V 10 H 18 V 4 H 30 V 10 H 36 V 4 H 46" /> */}
+                          {/* Bottom Skin Profile */}
+                          <path d="M 2 12 H 12 V 6 H 18 V 12 H 30 V 6 H 36 V 12 H 46" />
+                        </svg>
+                      </div>
+                      <Text value="Wave" textStyle="PricingDetail" />
+                   </div>
+                </div>
+                <p className="text-[10px] text-gray-500 text-center mt-5 italic">*Garis hanya sebagai ilustrasi</p>
+              </div>
+            </div>
           </div>
-        </section>
-        <LineDivider />
-        <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5 ">
-          <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
-            <figure className="w-full h-[315px] relative">
-              <img
-                src={'/images/ui-design-illustration.svg'}
-                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                alt='UI Design'
-              />
-            </figure>
-          </aside>
-          <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
-            <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
-              <SectionSentence
-                badge="UI DESIGN"
-                title="Don't let your idea get caught by others, design a prototype for your idea"
-                paragraph="Delegate your ideas as quickly as possible, create beautiful designs and vivid prototypes."
-              />
+
+          {/* Right Side: Specifications Table */}
+          <div className="w-full xl:w-2/3 bg-light p-8 lg:p-10 rounded-[10px] border border-borderLight">
+            <h3 className="text-2xl font-bold text-blue-500 mb-8">Specifications</h3>
+            
+            <div className="flex flex-col">
+              {EpsSpecifications.map((spec, index) => (
+                <div 
+                  key={index} 
+                  className="flex flex-col md:flex-row gap-2 md:gap-6 py-4 border-b border-borderLight last:border-0 hover:bg-[#2A2B30] transition-colors px-2 rounded-md"
+                >
+                  <div className="flex items-start w-full md:w-[220px] lg:w-[260px] shrink-0">
+                    <div className="font-semibold border-l-4 border-blue-600 pl-3 flex-1">
+                        <Text value={spec.label} textStyle="PricingDetail" />
+                    </div>
+                    <div className="hidden md:block text-gray-500 ml-4 mt-1">:</div>
+                  </div>
+                  
+                  <div className="w-full mt-1 md:mt-0 md:pl-6">
+                    <Text value={spec.value} textStyle="PricingDetail" />
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
-              <aside className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <SmallCardIcon
-                  title="Beautiful Design"
-                  description="Create a modern design for your idea."
-                  icon={<FiLayout />}
+          </div>
+
+        </div>
+      </section>
+      
+      <LineDivider />
+
+      {/* Insulated EPS Section (Replacing UI Design) */}
+      <section className="w-full flex flex-col gap-10 mt-16 mb-24">
+        <div className="flex flex-col xl:flex-row gap-10" data-aos="fade-up">
+          
+          {/* Left Side: Product Identity, Colors, & Skins */}
+          <div className="w-full xl:w-1/3 flex flex-col gap-6">
+            
+            {/* Title Badge */}
+            <div className="bg-light p-8 rounded-[10px] border border-borderLight shadow-sm">
+              <div className="border-l-4 border-blue-600 pl-4">
+                <Text value="Insulated" textStyle="PricingSubtitle" />
+                <h2 className="text-2xl font-bold text-white mt-1">Polyurethane (PUR)</h2>
+              </div>
+            </div>
+
+            {/* Product Image Placeholder */}
+            <div className="w-full relative h-[250px] bg-light rounded-[10px] border border-borderLight flex items-center justify-center p-4">
+                <img
+                    src={'/images/EPS-PRODUCT.svg'} // Ganti dengan path gambar produk yang sebenarnya
+                    alt="Insulated EPS Panel"
+                    className="w-full h-full object-contain"
                 />
-                <SmallCardIcon
-                  title="Prototype"
-                  description="Create vivid prototypes for your designs."
-                  icon={<FiLayout />}
-                />
-              </aside>
-              <TextArrowLink label="Service Detail" href="/service/detail" />
             </div>
-          </aside>
-        </section>
-        <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5 ">
-          <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
-            <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
-              <SectionSentence
-                badge="DEVELOPMENT"
-                title="Create solutions to repetitive problems, design applications and access anywhere!"
-                paragraph="Just tell us your repetitive problem or the primitive method used today, and we will create a digital solution."
-              />
+
+            {/* Color & Skin Variants */}
+            <div className="bg-light p-8 rounded-[10px] border border-borderLight flex flex-col gap-8">
+              
+              {/* Colors */}
+              <div>
+                <div className="bg-blue-600 text-white text-center py-2 rounded-md font-bold mb-6">
+                  Color
+                </div>
+                <div className="grid grid-cols-3 gap-4 text-center">
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="w-16 h-16 bg-[#FFFFFF] rounded-xl border-4 border-gray-400 flex items-center justify-center text-xs font-bold text-black">AZ70</div>
+                      <Text value="Cotton White" textStyle="PricingDetail" />
+                   </div>
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="w-16 h-16 bg-[#6A6A6A] rounded-xl border-4 border-gray-600 flex items-center justify-center text-xs font-bold text-black">AZ100</div>
+                      <Text value="Ampupu Grey" textStyle="PricingDetail" />
+                   </div>
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="w-16 h-16 bg-[#919BA4] rounded-xl border-4 border-gray-500 flex items-center justify-center text-xs font-bold text-black text-center leading-tight">AZ100</div>
+                      <Text value="Geranium Antibacterial" textStyle="PricingDetail" />
+                   </div>
+                </div>
+                <p className="text-[10px] text-gray-500 text-center mt-5 italic">*Warna hanya sebagai ilustrasi</p>
+              </div>
+
+              {/* Skins */}
+              <div>
+                <div className="bg-blue-600 text-white text-center py-2 rounded-md font-bold mb-6">
+                  Skin Profile
+                </div>
+                <div className="flex justify-center gap-12 text-center">
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="w-20 h-14 bg-blue border-2 border-borderLight rounded-lg flex flex-col justify-center items-center gap-[6px]">
+                        <div className="w-10 h-[2px] bg-gray-400"></div>
+                        <div className="w-10 h-[2px] bg-gray-400"></div>
+                      </div>
+                      <Text value="Flat" textStyle="PricingDetail" />
+                   </div>
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="w-20 h-14 bg-blue border-2 border-borderLight rounded-lg flex flex-col justify-center items-center gap-1">
+                        <svg className="w-12 h-6 text-gray-400" viewBox="0 0 48 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="miter">
+                          {/* Top Skin Profile */}
+                          {/* <path d="M 2 4 H 12 V 10 H 18 V 4 H 30 V 10 H 36 V 4 H 46" /> */}
+                          {/* Bottom Skin Profile */}
+                          <path d="M 2 12 H 12 V 6 H 18 V 12 H 30 V 6 H 36 V 12 H 46" />
+                        </svg>
+                      </div>
+                      <Text value="Wave" textStyle="PricingDetail" />
+                   </div>
+                </div>
+                <p className="text-[10px] text-gray-500 text-center mt-5 italic">*Garis hanya sebagai ilustrasi</p>
+              </div>
             </div>
-            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
-              <aside className="w-full grid grid-cols-1 gap-5">
-                <CardListIcon
-                  icon={<FiSmartphone />}
-                  title="Mobile App Development"
-                />
-                <CardListIcon
-                  icon={<FiMonitor />}
-                  title="Desktop App Development"
-                />
-                <CardListIcon icon={<FiGlobe />} title="Web Development" />
-              </aside>
-              <TextArrowLink label="Service Detail" href="/service/detail" />
+          </div>
+
+          {/* Right Side: Specifications Table */}
+          <div className="w-full xl:w-2/3 bg-light p-8 lg:p-10 rounded-[10px] border border-borderLight">
+            <h3 className="text-2xl font-bold text-blue-500 mb-8">Specifications</h3>
+            
+            <div className="flex flex-col">
+              {PurSpecifications.map((spec, index) => (
+                <div 
+                  key={index} 
+                  className="flex flex-col md:flex-row gap-2 md:gap-6 py-4 border-b border-borderLight last:border-0 hover:bg-[#2A2B30] transition-colors px-2 rounded-md"
+                >
+                  <div className="flex items-start w-full md:w-[220px] lg:w-[260px] shrink-0">
+                    <div className="font-semibold border-l-4 border-blue-600 pl-3 flex-1">
+                        <Text value={spec.label} textStyle="PricingDetail" />
+                    </div>
+                    <div className="hidden md:block text-gray-500 ml-4 mt-1">:</div>
+                  </div>
+                  
+                  <div className="w-full mt-1 md:mt-0 md:pl-6">
+                    <Text value={spec.value} textStyle="PricingDetail" />
+                  </div>
+                </div>
+              ))}
             </div>
-          </aside>
-          <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
-            <figure className="w-full h-[450px] relative">
-              <img
-                src={'/images/development-illustration.svg'}
-                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                alt='IDE for development'
-              />
-            </figure>
-          </aside>
-        </section>
-        <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5 ">
-          <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
-            <figure className="w-full h-[545px] relative">
-              <img
-                src={'/images/maintenance-illustration.svg'}
-                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                alt='server maintenance'
-              />
-            </figure>
-          </aside>
-          <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
-            <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
-              <SectionSentence
-                badge="MAINTENANCE"
-                title="Think of your server as your own child, taking care of it every day"
-                paragraph="We will back up your servers every day, clean them every week, upgrade them when there is an update."
-              />
-            </div>
-            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
-              <aside className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
-                <IconListItem icon={<FiDownload />} value='Back up every day' />
-                <IconListItem icon={<FiArrowUp />} value='Upgrade' />
-                <IconListItem icon={<FiRefreshCcw />} value='Cleaning every week' />
-                <IconListItem icon={<FiCheckCircle />} value='Fixing Error' />
-              </aside>
-              <TextArrowLink label="Service Detail" href="/service/detail" />
-            </div>
-          </aside>
-        </section>
-      </PageTemplate>
-    </>
+          </div>
+
+        </div>
+      </section>
+      
+
+    </PageTemplate>
   )
 }
 
-export default Services
+export default Service

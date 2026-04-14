@@ -1,17 +1,19 @@
 import React, { MouseEventHandler, useState } from 'react'
-import Button from 'components/atoms/Button'
+import ButtonLink from 'components/atoms/Button/ButtonLink'
 import Text from 'components/atoms/Text'
 import randomString from 'utils/randomString'
 interface Props {
   title: string
   price: string
   features: string[]
+  href: string
   buttonOnclick?: MouseEventHandler<HTMLButtonElement>
 }
 const PricingCard = ({
   title,
   price,
   features,
+  href, 
   buttonOnclick = () => {},
 }: Props) => {
   const [isHovered, setIsHovered] = useState<boolean>()
@@ -33,7 +35,7 @@ const PricingCard = ({
           <Text  key={randomString(64)} value={feature} textStyle="PricingDetail" />
         ))}
       </div>
-      <Button value="Detail" onClick={buttonOnclick} color={isHovered ? 'primary' : 'white'} />
+      <ButtonLink value="Detail" href={href} onClick={buttonOnclick} color={isHovered ? 'primary' : 'white'} />
     </div>
   )
 }

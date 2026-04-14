@@ -21,7 +21,7 @@ const ProjectCard = ({
           <img
             src={imageSrc}
             alt={title}
-            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }}
+            style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'top center' }}
           />
         </div>
       ) : (
