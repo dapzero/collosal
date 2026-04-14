@@ -27,10 +27,46 @@ const About = () => {
           data-aos="fade-up-left"
         >
           <PageSentence
-            badge="ABOUT"
-            title="We are creative, smart and hardworking people"
-            description={`Several creative people gather in the same place - that's Collosal. We collaborate to produce the best results, loved by clients and comfortable for users. Here we maintain togetherness even though with different backgrounds, all the people here are already experts in their respective fields.`}
+            badge="TENTANG KAMI"
+            title="Solusi Sandwich Panel Terdepan di Indonesia"
           />
+          
+          {/* Teks deskripsi dibuat menggunakan tag HTML murni agar bisa diformat tebal, miring, dan list */}
+          <div className="mt-8 text-gray-400 text-base leading-relaxed space-y-5 text-left">
+            <p>
+              Berbekal pengalaman selama 4 tahun di industri konstruksi, <strong>PT Andaru Mega Sentosa</strong> merupakan perusahaan manufaktur terkemuka yang berfokus pada penyediaan solusi <em>Sandwich Panel</em> (EPS & PUR) berkualitas tinggi. Didukung oleh fasilitas pabrik milik sendiri, kami memiliki kendali penuh atas proses produksi untuk memastikan setiap material yang kami hasilkan kokoh, efisien, dan tahan lama.
+            </p>
+            
+            <p>
+              Kami memiliki keahlian luas dalam mengaplikasikan <em>sandwich panel</em> untuk berbagai sektor, mulai dari bangunan prefabrikasi, rumah modular, kontainer, <em>shelter</em>, <em>Clean Room</em>, hingga sistem insulasi tingkat tinggi seperti <em>Cold Storage</em> (ruang beku). Selain panel, kami juga menyediakan solusi menyeluruh yang mencakup kebutuhan baja ringan, aluminium <em>extrusion</em>, pintu <em>cold storage</em>, hingga mesin pendingin industri.
+            </p>
+
+            <h3 className="text-white font-bold text-lg pt-2">Visi & Misi Kami</h3>
+            <p>
+              Kami berkomitmen untuk menjadi mitra konstruksi terpercaya di Indonesia dengan memberikan solusi <em>end-to-end</em>—mulai dari produksi material hingga layanan instalasi profesional. Kepuasan klien, ketepatan waktu, dan kualitas struktur yang presisi adalah prioritas utama kami dalam setiap proyek.
+            </p>
+
+            <h3 className="text-white font-bold text-lg pt-2">Mengapa Memilih PT Andaru Mega Sentosa?</h3>
+            <p>
+              Sebagai spesialis bangunan <em>knock-down</em> dan prefabrikasi, kami tidak hanya menjual material, tetapi memberikan solusi bangunan cerdas dengan keunggulan berikut:
+            </p>
+            
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                <strong className="text-gray-300">Pabrikasi Mandiri:</strong> Dengan memiliki fasilitas produksi (pabrik) sendiri, kami dapat menjamin konsistensi kualitas, harga yang lebih kompetitif, serta fleksibilitas desain sesuai kebutuhan proyek Anda.
+              </li>
+              <li>
+                <strong className="text-gray-300">Standar SNI & Bergaransi:</strong> Seluruh produk <em>sandwich panel</em> kami diproduksi dengan material berstandar SNI dan dilengkapi dengan <strong>garansi 1 tahun</strong> untuk memberikan Anda ketenangan dan kepastian kualitas.
+              </li>
+              <li>
+                <strong className="text-gray-300">Jangkauan Seluruh Indonesia:</strong> Di mana pun proyek Anda berada, kami siap melayani pemesanan, pengiriman material, hingga jasa instalasi ahli ke seluruh pelosok Nusantara.
+              </li>
+              <li>
+                <strong className="text-gray-300">Efisiensi Tinggi:</strong> Material kami dirancang untuk pemasangan yang cepat, anti-gempa, tahan terhadap cuaca, serta mampu menjaga kestabilan suhu ruangan secara maksimal untuk menekan biaya operasional Anda.
+              </li>
+            </ul>
+          </div>
+          
         </aside>
       </section>
       <LineDivider />

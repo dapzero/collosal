@@ -1,27 +1,30 @@
-import LazyCard from 'components/atoms/LazyCard'
+// import LazyCard from 'components/atoms/LazyCard'
 import LineDivider from 'components/atoms/LineDivider'
 import Text from 'components/atoms/Text'
 import PageSentence from 'components/molecules/PageSentence'
-import ProjectCard from 'components/molecules/Card/ProjectCard'
+// import ProjectCard from 'components/molecules/Card/ProjectCard'
 import PageTemplate from 'components/templates/PageTemplate'
+import { imageConfigDefault } from 'next/dist/shared/lib/image-config'
 import React from 'react'
-import randomString from 'utils/randomString'
+// import randomString from 'utils/randomString'
 
 const ProjectDetail = () => {
-  interface Project {
-    title: string
-    description: string
-  }
-  const projectList: Project[] = [
-    {
-      title: 'Simple Mobile Blog App',
-      description: 'A blog app on mobile platform',
-    },
-    {
-      title: 'Realtime Chat App UI Design',
-      description: 'A UI design for realtime chat app',
-    },
-  ]
+  const [activeImage, setActiveImage] = React.useState<string | null>(null)
+    const projectImages = [
+      {
+        src: '/images/screenshots/home.png',
+        caption: 'The Desktop App Landing Page - Home Screen',
+      },
+      {
+        src: '/images/screenshots/home.png',
+        caption: 'The Desktop App Landing Page - Home Screen',
+      },
+      {
+        src: '/images/screenshots/home.png',
+        caption: 'The Desktop App Landing Page - Home Screen',
+      }
+    ]
+
   return (
     <PageTemplate title='Project Detail - Collosal'>
       <section className="grid place-items-center" data-aos="zoom-in-up">
@@ -35,7 +38,13 @@ const ProjectDetail = () => {
       <LineDivider />
       <section className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <aside data-aos="fade-up-right">
-          <LazyCard bottomSquareSize="big" height={400} />
+          <div style={{ aspectRatio: `16/9`, overflow: 'hidden', borderRadius: '0.375rem'}}>
+            <img 
+              src="/images/screenshots/home.png"
+              alt="The Desktop App Landing Page"
+              style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'top' }}
+            />
+          </div>
         </aside>
         <aside className="grid gap-12 place-content-center" data-aos="fade-up-left">
           <Text
@@ -62,29 +71,24 @@ const ProjectDetail = () => {
         </aside>
       </section>
       <LineDivider />
-      <section className="grid gap-16 place-items-center">
-        <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12" data-aos="zoom-in-up">
-          <PageSentence
-            badge="PROJECT DETAIL"
-            title="The Desktop App Landing Page"
-          />
-        </div>
-        <div className="w-full grid grid-cols-1 gap-y-16 sm:grid-cols-2 sm:gap-x-5">
-          {projectList.map((project) => {
-            return (
-              <div
-                className="basis-full lg:basis-1/2"
-                key={randomString(64)}
-                data-aos="zoom-in-up"
-              >
-                <ProjectCard
-                  title={project.title}
-                  description={project.description}
-                />
-              </div>
-            )
-          })}
-        </div>
+      
+      <section className="w-full flex flex-col items-center gap-8">
+
+        {projectImages.map((image, index) => (
+          <div key={index} className="w-full" data-aos="fade-up">
+            <img
+              src={image.src}
+              alt={image.caption}
+              className="rounded-xl"
+              style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+            />
+            {image.caption && (
+              <p className="text-center text-sm text-gray-400 mt-3">
+                {image.caption}
+              </p>
+            )}
+          </div>
+        ))}
       </section>
     </PageTemplate>
   )

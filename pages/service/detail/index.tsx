@@ -100,7 +100,7 @@ const ServiceDetail = () => {
           <figure className="w-full h-[450px] relative">
             <img
               src={'/images/development-illustration.svg'}
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               alt="IDE that connect to Desktop, Mobile and Web mean multiple platform"
             />
           </figure>

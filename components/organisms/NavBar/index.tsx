@@ -66,11 +66,11 @@ const NavBar = () => {
                 <NavLink href="/service" value="Services" canActive={true} />
                 <NavLink
                   href="/how-we-work"
-                  value="How We Work"
+                  value="Alur Kerja Kami"
                   canActive={true}
                 />
-                <NavLink href="/project" value="Project" canActive={true} />
-                <NavLink href="/about" value="About" canActive={true} />
+                <NavLink href="/project" value="Proyek" canActive={true} />
+                <NavLink href="/about" value="Tentang" canActive={true} />
               </div>
               <div
                 className={`${isOpen ? '' : 'hidden '}lg:block mt-5 lg:mt-0`}

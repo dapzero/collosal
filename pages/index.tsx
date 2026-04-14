@@ -10,7 +10,13 @@ import TestimonialList from 'components/organisms/TestimonialList'
 import PageTemplate from 'components/templates/PageTemplate'
 // import Image from 'next/image' #versi sebelummnya
 import React from 'react'
-import { FiFigma, FiCode, FiBox } from 'react-icons/fi'
+// import { FiFigma, FiCode, FiBox } from 'react-icons/fi' #versi sebelummnya
+import { MdOutlineDesignServices } from 'react-icons/md'
+import { FaRegBuilding } from "react-icons/fa";
+import { GiElectric } from "react-icons/gi";
+
+
+
 const Home = () => {
   return (
     <>
@@ -22,15 +28,15 @@ const Home = () => {
         >
           <div className="w-10/12 md:w-8/12 text-center">
             <PageSentence
-              title="We Design. We Develop. We Ship. In The Same Day."
-              description="We are committed to not making clients wait. We will deliver the work as quickly as possible. Even on the same day. Even so, we do not reduce the quality of our work."
-              badge="CLIENT-DEVELOPMENT-DRIVEN"
+              title="Kami Merancang. Kami Membangun. Kami Mewujudkan."
+              description="Kami PT Andaru Mega Sentosa adalah perusahaan spesialis sandwich panel yang menghadirkan solusi konstruksi terintegrasi. Dengan menggabungkan desain presisi, proses manufaktur berkualitas, dan tim pemasangan ahli, kami memastikan bangunan Anda kokoh, efisien, dan estetis."
+              badge="DESAIN-PEMBANGUNAN-INSTALASI"
             />
           </div>
           <div className="flex flex-col gap-6 sm:flex-row w-full sm:w-fit">
-            <ButtonLink value="Send Quote" href="/quote" />
+            <ButtonLink value="Hubungi Kami" href="/quote" />
             <ButtonLink
-              value="Learn More"
+              value="Lebih Lanjut"
               color="white"
               style="light"
               href="/about"
@@ -41,23 +47,23 @@ const Home = () => {
         <section className="grid grid-cols-1 gap-5 md:grid-cols-3 mb-16">
           <div data-aos="fade-up">
             <FeatureCard
-              title="Design"
-              description="The project interface will be designed first, our favorite tool is Figma."
-              icon={<FiFigma />}
+              title="Desain"
+              description="Perencanaan presisi adalah kunci efisiensi bangunan. Kami merancang desain teknis dan layout sandwich panel yang dioptimalkan untuk isolasi suhu, kekuatan struktur, dan estetika bangunan Anda."
+              icon={<MdOutlineDesignServices />}
             />
           </div>
           <div data-aos="fade-up">
             <FeatureCard
-              title="Develop"
-              description="Transform design and write business logic here. Choose the technology you want."
-              icon={<FiCode />}
+              title="Fabrikasi"
+              description="Kami memproduksi sandwich panel dengan material berkualitas tinggi dan standar industri. Fokus kami adalah menciptakan struktur yang kokoh, tahan lama, dan memiliki kemampuan insulasi terbaik di kelasnya."
+              icon={<FaRegBuilding />}
             />
           </div>
           <div data-aos="fade-up">
             <FeatureCard
-              title="Ship"
-              description="After the work is complete, we will send the project and all its assets to you."
-              icon={<FiBox />}
+              title="Instalasi"
+              description="Pemasangan dilakukan oleh tim ahli untuk memastikan sistem interlocking panel terpasang sempurna. Kami menjamin proses instalasi yang cepat, rapi, dan memenuhi standar keamanan struktur bangunan."
+              icon={<GiElectric />}
             />
           </div>
         </section>
@@ -68,7 +74,7 @@ const Home = () => {
           <aside className="w-full h-[400px] relative" data-aos="fade-right">
             <img
               src={'/images/how-we-work-illustration.svg'}
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               alt="Structured plan"
             />
           </aside>
@@ -107,7 +113,7 @@ const Home = () => {
           >
             <img
               src={'/images/team-illustration.svg'}
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               alt="Code editor and UI Editing popup"
             />
           </aside>
@@ -139,6 +145,7 @@ const Home = () => {
               />
             </div>
           </div>
+          <ButtonLink value="Load More" href='/project' color="white" style="light" />
         </section>
         {/* Prices */}
         <section className="flex flex-col gap-16 items-center">
@@ -156,6 +163,7 @@ const Home = () => {
               <PricingCard
                 price="1200$"
                 title="UI Design"
+                href='/contact'
                 features={[
                   '10 design pages',
                   'Well-documented',
@@ -168,6 +176,7 @@ const Home = () => {
               <PricingCard
                 price="5000$"
                 title="Development"
+                href='/contact'
                 features={[
                   'Web & Mobile',
                   'Well-documented',
@@ -180,6 +189,7 @@ const Home = () => {
               <PricingCard
                 price="3000$"
                 title="Maintenance"
+                href='contact'
                 features={[
                   'Daily backup',
                   '3 hours of maintenance',

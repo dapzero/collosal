@@ -2,6 +2,7 @@ import NavBrand from 'components/atoms/NavBrand'
 import NavLink from 'components/atoms/NavLink'
 import Text from 'components/atoms/Text'
 import React from 'react'
+import { FiYoutube, FiFacebook, FiInstagram } from 'react-icons/fi'
 
 const Footer = () => {
   return (
@@ -15,10 +16,12 @@ const Footer = () => {
                 value={`Copyright © ${new Date().getFullYear()}`}
                 textStyle="SectionParagraph"
               />
-              <Text
-                value={`Design By Collosal LLC`}
-                textStyle="SectionParagraph"
-              />
+              <a href="https://github.com/rei1406/" target={'_blank'} rel="noreferrer">
+                <Text
+                  value={`Source Code by Eko Susilo`}
+                  textStyle="SectionParagraph"
+                />
+              </a>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:gap-16 xl:gap-20">
@@ -42,9 +45,8 @@ const Footer = () => {
             <div className="space-y-5">
               <Text value="COMPANY" textStyle="FooterLinkGroupTitle" />
               <div className="space-y-[10px]">
-                <NavLink value="About" href="/about" />
-                <NavLink value="Contact" href="/contact" />
-                <NavLink value="Send Quote" href="/quote" />
+                <NavLink value="Tentang Kami" href="/about" />
+                <NavLink value="Hubungi Kami" href="/contact" />
                 <NavLink value="Privacy Policy" href="/privacy-policy" />
                 <NavLink value="Term of Service" href="/term-of-service" />
                 <NavLink value="Jobs" href="/jobs" />
@@ -52,12 +54,25 @@ const Footer = () => {
               </div>
             </div>
             <div className="space-y-5">
-              <Text value="RESOURCES" textStyle="FooterLinkGroupTitle" />
+              <Text value="MEDIA SOSIAL" textStyle="FooterLinkGroupTitle" />
               <div className="space-y-[10px]">
-                <NavLink value="Support" href="/support" />
-                <NavLink value="Documentation" href="/documentation" />
-                <NavLink value="License" href="/license" />
-                <NavLink value="Sitemap" href="/sitemap" />
+                <div className="flex items-center gap-2 text-white text-oppacity-80">
+                  <FiYoutube />
+                  <NavLink value="Youtube" href="https://www.youtube.com/@andarumegasentosa1" />
+                </div>
+                <div className="flex items-center gap-2 text-white text-oppacity-80">
+                  <FiFacebook />
+                  <NavLink value="Facebook" href="https://www.facebook.com/people/Andaru-Mega-Sentosa/100091799316879/" />
+                </div>
+                <div className="flex items-center gap-2 text-white text-oppacity-80">
+                  <FiInstagram />
+                  <NavLink value="Instagram" href="https://www.instagram.com/andarumegasentosa1/" />
+                </div>
+                <div className="flex items-center gap-2 text-white text-oppacity-80">
+                  <FiInstagram />
+                  <NavLink value="LinkedIn" href="https://www.linkedin.com/company/andarumega-sentosa/" />
+                </div>
+                  <NavLink value="Sitemap" href="/sitemap" />
               </div>
             </div>
           </div>

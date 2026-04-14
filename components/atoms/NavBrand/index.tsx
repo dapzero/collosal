@@ -15,8 +15,8 @@ const NavBrand = () => {
         <Link href={'/'} passHref>
           <div className="w-fit h-fit">
             <img 
-              src= {'/images/brand.svg'} 
-              style= {{ width: '135px', height: '100%' }}
+              src= {'/images/brand-px15.svg'} 
+              style= {{ width: '100%', height: '100%' }}
               alt='company brand' 
               loading='lazy' 
             />
