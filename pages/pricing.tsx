@@ -3,8 +3,8 @@ import Text from 'components/atoms/Text'
 import PricingCard from 'components/molecules/Card/PricingCard'
 import PageSentence from 'components/molecules/PageSentence'
 import PageTemplate from 'components/templates/PageTemplate'
-import Link from 'next/link'
-import React from 'react'
+// import Link from 'next/link' <-- This is a comment to prevent the error of Link component not being used -->
+// import React from 'react' <-- This is a comment to prevent the error of React component not being used -->
 import randomString from 'utils/randomString'
 
 const Pricing = () => {
@@ -38,6 +38,8 @@ const Pricing = () => {
       description: `1 year warranty for our errors or mistakes. If you want to add a feature that is not included in the warranty, there is another fee per feature, and the price depends on the difficulty.`,
     },
   ]
+
+  {/*
 
   return (
     <PageTemplate>
@@ -118,6 +120,7 @@ const Pricing = () => {
       </section>
     </PageTemplate>
   )
+    */}
 }
 
 export default Pricing
