@@ -12,7 +12,7 @@ const CallOut = () => {
           <SectionSentence title="Tertarik memulai proyek Anda?, kami siap menjalin kerjasama" />
         </div>
         <div className="flex flex-col gap-5 w-full sm:w-fit sm:flex-row lg:w-full lg:justify-end">
-          <ButtonLink value="Hubungi Kami" href="/contact" />
+          <ButtonLink value="Hubungi Kami" href="https://wa.me/6281210000454" />
           <ButtonLink value="Sering Ditanyakan" color="white" style="light" href="/faq" />
         </div>
       </section>

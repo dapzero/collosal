@@ -34,7 +34,7 @@ const Home = () => {
             />
           </div>
           <div className="flex flex-col gap-6 sm:flex-row w-full sm:w-fit">
-            <ButtonLink value="Hubungi Kami" href="/quote" />
+            <ButtonLink value="Hubungi Kami" href="/contact" />
             <ButtonLink
               value="Lebih Lanjut"
               color="white"
@@ -67,8 +67,24 @@ const Home = () => {
             />
           </div>
         </section>
+
+        <LineDivider />
+
         {/* Logo List */}
+        <section
+          className="flex flex-col gap-10 items-center"
+          data-aos="fade-up"
+        >
+          <div className="w-10/12 md:w-8/12 text-center">
+            <PageSentence
+              title="Kami bekerja sama dengan vendor terpercaya"
+              // description="Kami PT Andaru Mega Sentosa adalah perusahaan spesialis sandwich panel yang menghadirkan solusi konstruksi terintegrasi. Dengan menggabungkan desain presisi, proses manufaktur berkualitas, dan tim pemasangan ahli, kami memastikan bangunan Anda kokoh, efisien, dan estetis."
+              badge="VENDOR KAMI"
+            />
+          </div>
+        </section>
         <LogoList />
+
         {/* How We Work */}
         <section className="grid grid-cols-1 gap-6 sm:gap-8 place-items-center lg:grid-cols-2">
           <aside className="w-full h-[400px] relative" data-aos="fade-right">
@@ -126,8 +142,8 @@ const Home = () => {
             data-aos="zoom-in-up"
           >
             <SectionSentence
-              title="We have completed many amazing projects that you will not believe"
-              badge="PROJECTS"
+              title="Kami telah menyelesaikan banyak proyek yang menakjubkan yang tidak akan Anda percayai"
+              badge="PROYEK KAMI"
             />
           </div>
           <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5">
@@ -145,7 +161,7 @@ const Home = () => {
               />
             </div>
           </div>
-          <ButtonLink value="Load More" href='/project' color="white" style="light" />
+          <ButtonLink value="Lihat Semua Proyek" href='/project' color="white" style="light" />
         </section>
         {/* Prices */}
         <section className="flex flex-col gap-16 items-center">

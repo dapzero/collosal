@@ -15,19 +15,19 @@ const Contact = () => {
           <aside className="w-full sm:w-10/12 md:w-8/12 grid grid-cols-1 gap-12 sm:place-items-center lg:w-full lg:place-items-start" data-aos="fade-up-right">
             <div className="sm:text-center lg:text-left">
               <PageSentence
-                title="We love receiving messages from you, we are waiting for it."
-                badge="CONTACT"
+                title="Kami senang menerima pesan dari Anda, kami menunggunya."
+                badge="KONTAK KAMI"
               />
             </div>
             <div className="space-y-6">
               <IconListItem
-                label="Phone"
-                value="+62 1234 8921"
+                label="HP/WhatsApp"
+                value="0812 1000 0454"
                 icon={<FiPhoneCall />}
               />
               <IconListItem
                 label="Email"
-                value="support@collosal.tld"
+                value="info@andarumegasentosa.com"
                 icon={<FiMail />}
               />
             </div>
@@ -35,12 +35,12 @@ const Contact = () => {
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full lg:flex lg:justify-end" data-aos="fade-down-left">
             <div className="grid grid-cols-1 gap-7 p-6 md:p-9 bg-light rounded-md lg:w-10/12 ">
               <div className="grid grid-cols-2 gap-4">
-                <InputGroup label="Name" />
+                <InputGroup label="Nama" />
                 <InputGroup label="Email" />
               </div>
-              <InputGroup label="Subject" />
-              <TextAreaGroup label="Message" />
-              <Button value="Send Message" />
+              <InputGroup label="Subyek" />
+              <TextAreaGroup label="Pesan" />
+              <Button value="Kirim Pesan" />
             </div>
           </aside>
         </section>

@@ -60,8 +60,8 @@ const Project = () => {
         >
           <div className="text-center md:text-left">
             <PageSentence
-              badge="PROJECTS"
-              title="We have completed many amazing projects that you will not believe"
+              badge="PROYEK-PROYEK KAMI"
+              title="Beberapa proyek yang telah kami selesaikan, kami yakin Anda akan menyukainya."
             />
           </div>
         </aside>

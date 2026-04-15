@@ -179,8 +179,8 @@ const Service = () => {
             {/* Product Image Placeholder */}
             <div className="w-full relative h-[250px] bg-light rounded-[10px] border border-borderLight flex items-center justify-center p-4">
                 <img
-                    src={'/images/EPS-PRODUCT.svg'} // Ganti dengan path gambar produk yang sebenarnya
-                    alt="Insulated EPS Panel"
+                    src={'/images/PUR-PRODUCT.svg'} // Ganti dengan path gambar produk yang sebenarnya
+                    alt="Insulated PUR Panel"
                     className="w-full h-full object-contain"
                 />
             </div>
