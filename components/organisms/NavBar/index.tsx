@@ -76,7 +76,7 @@ const NavBar = () => {
                 className={`${isOpen ? '' : 'hidden '}lg:block mt-5 lg:mt-0`}
               >
                 <ButtonLink
-                  value="Contact"
+                  value="Kontak"
                   style="light"
                   color="white"
                   size="small"
