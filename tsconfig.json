@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2020", // <- default "es5"
     "lib": [
       "dom",
       "dom.iterable",
@@ -13,18 +13,20 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler", // <- default "node"
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "./"
+    "paths": {              // <- default "baseUrl": "./"
+      "@/*": ["./"]  
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "try.js"
+//    "try.js"              // <- default memakai "try.js"
   ],
   "exclude": [
     "node_modules"

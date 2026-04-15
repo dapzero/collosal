@@ -1,0 +1,1069 @@
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+      // ... rest of config
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx"
+      // ← hapus "try.js"
+    ],
+    "exclude": ["node_modules"]
+  }
+
+  Yang perlu diubah:
+  - Hapus "try.js" dari include
+  - Ubah "target": "es5" menjadi "es2020" untuk Next.js modern
+
+  Mau saya perbaiki langsung?
+
+❯ masih ada error                                                                                                                                                                                                                                                                                                      
+
+● Saya cek error spesifik dari IDE.
+
+  Called ide (ctrl+o to expand)
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "module": "esnext",
+      // ... rest of config
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx"
+      // ← hapus "try.js"
+    ],
+    "exclude": ["node_modules"]
+  }
+
+  Yang perlu diubah:
+  - Hapus "try.js" dari include
+  - Ubah "target": "es5" menjadi "es2020" untuk Next.js modern
+
+  Mau saya perbaiki langsung?
+
+❯ masih ada error                                                                                                                                                                                                                                                                                                      
+
+● Saya cek error spesifik dari IDE.
+
+  Called ide (ctrl+o to expand)
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+      "target": "es2020",        // ← ubah dari es5
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "module": "esnext",
+      // ... rest of config
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx"
+      // ← hapus "try.js"
+    ],
+    "exclude": ["node_modules"]
+  }
+
+  Yang perlu diubah:
+  - Hapus "try.js" dari include
+  - Ubah "target": "es5" menjadi "es2020" untuk Next.js modern
+
+  Mau saya perbaiki langsung?
+
+❯ masih ada error                                                                                                                                                                                                                                                                                                      
+
+● Saya cek error spesifik dari IDE.
+
+  Called ide (ctrl+o to expand)
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+    "compilerOptions": {
+      "target": "es2020",        // ← ubah dari es5
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "module": "esnext",
+      // ... rest of config
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx"
+      // ← hapus "try.js"
+    ],
+    "exclude": ["node_modules"]
+  }
+
+  Yang perlu diubah:
+  - Hapus "try.js" dari include
+  - Ubah "target": "es5" menjadi "es2020" untuk Next.js modern
+
+  Mau saya perbaiki langsung?
+
+❯ masih ada error                                                                                                                                                                                                                                                                                                      
+
+● Saya cek error spesifik dari IDE.
+
+  Called ide (ctrl+o to expand)
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+
+  {
+    "compilerOptions": {
+      "target": "es2020",        // ← ubah dari es5
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "module": "esnext",
+      // ... rest of config
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx"
+      // ← hapus "try.js"
+    ],
+    "exclude": ["node_modules"]
+  }
+
+  Yang perlu diubah:
+  - Hapus "try.js" dari include
+  - Ubah "target": "es5" menjadi "es2020" untuk Next.js modern
+
+  Mau saya perbaiki langsung?
+
+❯ masih ada error                                                                                                                                                                                                                                                                                                      
+
+● Saya cek error spesifik dari IDE.
+
+  Called ide (ctrl+o to expand)
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+
+  Rekomendasi perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",        // ← ubah dari es5
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "module": "esnext",
+      // ... rest of config
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx"
+      // ← hapus "try.js"
+    ],
+    "exclude": ["node_modules"]
+  }
+
+  Yang perlu diubah:
+  - Hapus "try.js" dari include
+  - Ubah "target": "es5" menjadi "es2020" untuk Next.js modern
+
+  Mau saya perbaiki langsung?
+
+❯ masih ada error                                                                                                                                                                                                                                                                                                      
+
+● Saya cek error spesifik dari IDE.
+
+  Called ide (ctrl+o to expand)
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+    - Atau "target": "es5" dengan "module": "commonjs" (klasik)
+
+  Rekomendasi perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",        // ← ubah dari es5
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "module": "esnext",
+      // ... rest of config
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx"
+      // ← hapus "try.js"
+    ],
+    "exclude": ["node_modules"]
+  }
+
+  Yang perlu diubah:
+  - Hapus "try.js" dari include
+  - Ubah "target": "es5" menjadi "es2020" untuk Next.js modern
+
+  Mau saya perbaiki langsung?
+
+❯ masih ada error                                                                                                                                                                                                                                                                                                      
+
+● Saya cek error spesifik dari IDE.
+
+  Called ide (ctrl+o to expand)
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+
+  1. "try.js" di include (baris 27) — ini terlihat seperti file test/temporary yang tidak seharusnya ada di sini. Hapus kecuali ada alasan khusus.
+  2. Mismatch target vs module — target es5 dengan module esnext tidak selaras. Untuk Next.js, biasanya:
+    - Gunakan "target": "es2020" dan "module": "esnext" (modern)
+    - Atau "target": "es5" dengan "module": "commonjs" (klasik)
+
+  Rekomendasi perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",        // ← ubah dari es5
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "module": "esnext",
+      // ... rest of config
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx"
+      // ← hapus "try.js"
+    ],
+    "exclude": ["node_modules"]
+  }
+
+  Yang perlu diubah:
+  - Hapus "try.js" dari include
+  - Ubah "target": "es5" menjadi "es2020" untuk Next.js modern
+
+  Mau saya perbaiki langsung?
+
+❯ masih ada error                                                                                                                                                                                                                                                                                                      
+
+● Saya cek error spesifik dari IDE.
+
+  Called ide (ctrl+o to expand)
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+
+  1. "try.js" di include (baris 27) — ini terlihat seperti file test/temporary yang tidak seharusnya ada di sini. Hapus kecuali ada alasan khusus.
+  2. Mismatch target vs module — target es5 dengan module esnext tidak selaras. Untuk Next.js, biasanya:
+    - Gunakan "target": "es2020" dan "module": "esnext" (modern)
+    - Atau "target": "es5" dengan "module": "commonjs" (klasik)
+
+  Rekomendasi perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",        // ← ubah dari es5
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "module": "esnext",
+      // ... rest of config
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx"
+      // ← hapus "try.js"
+    ],
+    "exclude": ["node_modules"]
+  }
+
+  Yang perlu diubah:
+  - Hapus "try.js" dari include
+  - Ubah "target": "es5" menjadi "es2020" untuk Next.js modern
+
+  Mau saya perbaiki langsung?
+
+❯ masih ada error                                                                                                                                                                                                                                                                                                      
+
+● Saya cek error spesifik dari IDE.
+
+  Called ide (ctrl+o to expand)
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+    - Atau "target": "es5" dengan "module": "commonjs" (klasik)
+
+  Rekomendasi perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",        // ← ubah dari es5
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "module": "esnext",
+      // ... rest of config
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx"
+      // ← hapus "try.js"
+    ],
+    "exclude": ["node_modules"]
+  }
+
+  Yang perlu diubah:
+  - Hapus "try.js" dari include
+  - Ubah "target": "es5" menjadi "es2020" untuk Next.js modern
+
+  Mau saya perbaiki langsung?
+
+❯ masih ada error                                                                                                                                                                                                                                                                                                      
+
+● Saya cek error spesifik dari IDE.
+
+  Called ide (ctrl+o to expand)
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+
+● Saya cek error spesifik dari IDE.
+
+  Called ide (ctrl+o to expand)
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+
+  Called ide (ctrl+o to expand)
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+
+  1. "try.js" di include (baris 27) — ini terlihat seperti file test/temporary yang tidak seharusnya ada di sini. Hapus kecuali ada alasan khusus.
+  2. Mismatch target vs module — target es5 dengan module esnext tidak selaras. Untuk Next.js, biasanya:
+    - Gunakan "target": "es2020" dan "module": "esnext" (modern)
+    - Atau "target": "es5" dengan "module": "commonjs" (klasik)
+
+  Rekomendasi perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",        // ← ubah dari es5
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "module": "esnext",
+      // ... rest of config
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx"
+      // ← hapus "try.js"
+    ],
+    "exclude": ["node_modules"]
+  }
+
+  Yang perlu diubah:
+  - Hapus "try.js" dari include
+  - Ubah "target": "es5" menjadi "es2020" untuk Next.js modern
+
+  Mau saya perbaiki langsung?
+
+❯ masih ada error                                                                                                                                                                                                                                                                                                      
+
+● Saya cek error spesifik dari IDE.
+
+  Called ide (ctrl+o to expand)
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+
+  1. "try.js" di include (baris 27) — ini terlihat seperti file test/temporary yang tidak seharusnya ada di sini. Hapus kecuali ada alasan khusus.
+  2. Mismatch target vs module — target es5 dengan module esnext tidak selaras. Untuk Next.js, biasanya:
+    - Gunakan "target": "es2020" dan "module": "esnext" (modern)
+    - Atau "target": "es5" dengan "module": "commonjs" (klasik)
+
+  Rekomendasi perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",        // ← ubah dari es5
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "module": "esnext",
+      // ... rest of config
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx"
+      // ← hapus "try.js"
+    ],
+    "exclude": ["node_modules"]
+  }
+
+  Yang perlu diubah:
+  - Hapus "try.js" dari include
+  - Ubah "target": "es5" menjadi "es2020" untuk Next.js modern
+
+  Mau saya perbaiki langsung?
+
+❯ masih ada error                                                                                                                                                                                                                                                                                                      
+
+● Saya cek error spesifik dari IDE.
+
+  Called ide (ctrl+o to expand)
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ? for shortcuts                                                                                                                                                                                                                                                                                  ⧉ In tsconfig.json
+
+  1. "try.js" di include (baris 27) — ini terlihat seperti file test/temporary yang tidak seharusnya ada di sini. Hapus kecuali ada alasan khusus.
+  2. Mismatch target vs module — target es5 dengan module esnext tidak selaras. Untuk Next.js, biasanya:
+    - Gunakan "target": "es2020" dan "module": "esnext" (modern)
+    - Atau "target": "es5" dengan "module": "commonjs" (klasik)
+
+  Rekomendasi perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",        // ← ubah dari es5
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "module": "esnext",
+      // ... rest of config
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx"
+      // ← hapus "try.js"
+    ],
+    "exclude": ["node_modules"]
+  }
+
+  Yang perlu diubah:
+  - Hapus "try.js" dari include
+  - Ubah "target": "es5" menjadi "es2020" untuk Next.js modern
+
+  Mau saya perbaiki langsung?
+
+❯ masih ada error                                                                                                                                                                                                                                                                                                      
+
+● Saya cek error spesifik dari IDE.
+
+  Called ide (ctrl+o to expand)
+
+● Ah! Errornya dari TypeScript 6.0 — ada 2 deprecation warning:
+
+  1. Line 16 — "moduleResolution": "node" sudah deprecated, ganti ke "bundler" atau "nodenext"
+  2. Line 21 — "baseUrl" deprecated, gunakan paths configuration sebagai gantinya
+
+  Perbaikan:
+
+  {
+    "compilerOptions": {
+      "target": "es2020",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "bundler",    // ← ubah dari "node"
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "incremental": true,
+      "paths": {                         // ← ganti baseUrl dengan paths
+        "@/*": ["./*"]
+      }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  }
+
+  Mau saya apply perbaikan ini?
+
+※ recap: Fixing tsconfig.json TypeScript 6.0 deprecation errors. Found two issues: `moduleResolution: "node"` → `"bundler"` and `baseUrl` → `paths`. Ready to apply fixes. (disable recaps in /config)
