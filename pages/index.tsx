@@ -71,17 +71,55 @@ const Home = () => {
         <LineDivider />
 
         {/* Logo List */}
-        <section
-          className="flex flex-col gap-10 items-center"
-          data-aos="fade-up"
-        >
-          <div className="w-10/12 md:w-8/12 text-center">
-            <PageSentence
-              title="Kami bekerja sama dengan vendor terpercaya"
-              // description="Kami PT Andaru Mega Sentosa adalah perusahaan spesialis sandwich panel yang menghadirkan solusi konstruksi terintegrasi. Dengan menggabungkan desain presisi, proses manufaktur berkualitas, dan tim pemasangan ahli, kami memastikan bangunan Anda kokoh, efisien, dan estetis."
-              badge="VENDOR KAMI"
+        <LogoList />
+        {/* How We Work */}
+        <section className="grid grid-cols-1 gap-6 sm:gap-8 place-items-center lg:grid-cols-2">
+          <aside className="w-full h-[400px] relative" data-aos="fade-right">
+            <img
+              src={'/images/how-we-work-illustration.svg'}
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+              alt="Structured plan"
             />
-          </div>
+          </aside>
+          <aside
+            className="text-center sm:w-10/12 lg:text-left lg:w-full"
+            data-aos="fade-left"
+          >
+            <SectionSentence
+              title="Everything is well planned, well designed and developed wholeheartedly"
+              paragraph="Careful planning makes us confident, developed with best practices so that the project can be maintained. We always test projects before they are shipped."
+              badge="HOW WE WORK"
+            />
+          </aside>
+        </section>
+        {/* Our Teams */}
+        <section className="grid grid-cols-1 gap-6 sm:gap-8 place-items-center lg:grid-cols-2">
+          <aside className="text-center sm:w-10/12 lg:text-left lg:w-full">
+            <div className="space-y-12" data-aos="fade-right">
+              <SectionSentence
+                title="We're a team of designers, engineers and analysts"
+                paragraph="Our team consists of many creative people. We are committed to maintaining quality work as well as speed. These creative people work together to create maximum work results."
+                badge="OUR TEAM"
+              />
+              <ButtonLink
+                value="See Our Teams"
+                href="/teams"
+                size="small"
+                color="white"
+                style="light"
+              />
+            </div>
+          </aside>
+          <aside
+            className="w-full h-[400px] relative sm:w-8/12 lg:w-full"
+            data-aos="fade-left"
+          >
+            <img
+              src={'/images/team-illustration.svg'}
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+              alt="Code editor and UI Editing popup"
+            />
+          </aside>
         </section>
         <LogoList />
 
@@ -92,8 +130,8 @@ const Home = () => {
             data-aos="zoom-in-up"
           >
             <SectionSentence
-              title="Proyek terbaru kami, kami yakin Anda akan menyukainya."
-              badge="PROYEK KAMI"
+              title="We have completed many amazing projects that you will not believe"
+              badge="PROJECTS"
             />
           </div>
           <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5">
@@ -114,7 +152,60 @@ const Home = () => {
               />
             </div>
           </div>
-          <ButtonLink value="Lihat Semua Proyek" href='/project' color="white" style="light" />
+          <ButtonLink value="Load More" href='/project' color="white" style="light" />
+        </section>
+        {/* Prices */}
+        <section className="flex flex-col gap-16 items-center">
+          <div
+            className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12"
+            data-aos="zoom-in-up"
+          >
+            <SectionSentence
+              title="What do you need? Choose a service that can help you"
+              badge="GET STARTED"
+            />
+          </div>
+          <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
+            <div data-aos="fade-up-right">
+              <PricingCard
+                price="1200$"
+                title="UI Design"
+                href='/contact'
+                features={[
+                  '10 design pages',
+                  'Well-documented',
+                  '4 revisions',
+                  '$100/additional page',
+                ]}
+              />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+              <PricingCard
+                price="5000$"
+                title="Development"
+                href='/contact'
+                features={[
+                  'Web & Mobile',
+                  'Well-documented',
+                  '8 revisions',
+                  '$1000/additional page',
+                ]}
+              />
+            </div>
+            <div data-aos="fade-up-left">
+              <PricingCard
+                price="3000$"
+                title="Maintenance"
+                href='contact'
+                features={[
+                  'Daily backup',
+                  '3 hours of maintenance',
+                  'Including fixing',
+                  '$50/additional hour',
+                ]}
+              />
+            </div>
+          </div>
         </section>
         {/* Testimonial */}
         <section className="flex flex-col gap-16 items-center">
