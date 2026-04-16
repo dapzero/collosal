@@ -3,7 +3,8 @@ import PageTemplate from 'components/templates/PageTemplate'
 import PageSentence from 'components/molecules/PageSentence'
 import LineDivider from 'components/atoms/LineDivider'
 import Text from 'components/atoms/Text'
-import Image from 'next/image'
+// import Image from 'next/image' <- Ganti ke img biasa karena next/image tidak support untuk gambar yang berada di public folder
+import ButtonLink from 'components/atoms/Button/ButtonLink'
 
 const EpsSpecifications = [
   { label: 'Steel Skins', value: 'Prepainted Steel with Corrosion Resistant Alloy (55% Aluminum, 43.5% Zinc and 1.5% Silicone)' },
@@ -34,7 +35,20 @@ const PurSpecifications = [
   { label: 'Protection', value: 'Fire Retardant and Water Resistant' },
   { label: 'Width Dimension', value: '1200mm (Wall), 1000mm (Roof)' },
   { label: 'Length Dimension', value: 'Up to 12000mm/modul' },
-  { label: 'Usage', value: "ABF Room, Cold Storage Room, Chiller Room, Machine Room, Electrical Panel Room, Oven Room, Drying Room, and many more." },
+  { label: 'Usage', value: 'ABF Room, Cold Storage Room, Chiller Room, Machine Room, Electrical Panel Room, Oven Room, Drying Room, and many more.' },
+]
+
+const AluminiumExtrusionSpecifications = [
+  { label: 'Alloy/Aluminium', value: 'Aluminium Alloy 6061-T6, 6063-T5' },
+  { label: 'Temper Grade', value: 'T5, T6, T651 options' },
+  { label: 'Finish Treatment', value: 'Clear Anodized, Dark Bronze Anodized, Powder Coated (RAL Colors), Mill Finish' },
+  { label: 'Material Gauge', value: 'Typical Range: 1.5mm - 6.0mm' },
+  { label: 'Profile Customization', value: 'Fully Custom Cross-Section Dies or Standard Shapes' },
+  { label: 'Length', value: 'Standard 6 Meters or Cut-to-Size' },
+  { label: 'Assembly Methods', value: 'Mechanical Connectors, T-bolts, Assembly Brackets, Fasteners' },
+  { label: 'Tolerance', value: 'Precise Dimensional Tolerance (SNI, ISO standards)' },
+  { label: 'Application', value: 'Structural Framing, Industrial Modular Systems, Electronics Heat Sinks, Windows & Doors' },
+  { label: 'Protection', value: 'Corrosion Resistant (Natural/Anodized), UV Stable (Powder Coated)' },
 ]
 
 const Service = () => {
@@ -161,7 +175,7 @@ const Service = () => {
       
       <LineDivider />
 
-      {/* Insulated EPS Section (Replacing UI Design) */}
+      {/* Insulated PUR Section (Replacing UI Design) */}
       <section className="w-full flex flex-col gap-10 mt-16 mb-24">
         <div className="flex flex-col xl:flex-row gap-10" data-aos="fade-up">
           
@@ -264,11 +278,100 @@ const Service = () => {
               ))}
             </div>
           </div>
-
         </div>
       </section>
-      
 
+      {/* Aluminium Extrusion */}
+      <section className="w-full flex flex-col gap-10 mt-16 mb-24">
+        <div className="flex flex-col xl:flex-row gap-10" data-aos="fade-up">
+          
+          {/* Left Side: Product Identity, Colors, & Skins */}
+          <div className="w-full xl:w-1/3 flex flex-col gap-6">
+            
+            {/* Title Badge */}
+            <div className="bg-light p-8 rounded-[10px] border border-borderLight shadow-sm">
+              <div className="border-l-4 border-blue-600 pl-4">
+                <Text value="Insulated" textStyle="PricingSubtitle" />
+                <h2 className="text-2xl font-bold text-white mt-1">Aluminium Extrusion</h2>
+              </div>
+            </div>
+
+            {/* Product Image Placeholder */}
+            <div className="w-full relative h-[250px] bg-light rounded-[10px] border border-borderLight flex items-center justify-center p-4">
+                <img
+                    src={'/images/aluminium-extrusion.svg'} // Ganti dengan path gambar produk yang sebenarnya
+                    alt="aluminium extrusion"
+                    className="w-full h-full object-contain"
+                />
+            </div>
+
+            {/* Color & Skin Variants */}
+            <div className="bg-light p-8 rounded-[10px] border border-borderLight flex flex-col gap-8">
+              
+              {/* Colors */}
+              <div>
+                <div className="bg-blue-600 text-white text-center py-2 rounded-md font-bold mb-6">
+                  Color
+                </div>
+                <div className="grid grid-cols-3 gap-4 text-center">
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="w-16 h-16 bg-[#E5E7EB] rounded-xl border-4 border-gray-400 flex items-center justify-center text-[9px] font-bold text-black px-1 text-center leading-tight">Anodized Clear</div>
+                      <Text value="Clear Natural Anodized" textStyle="PricingDetail" />
+                   </div>
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="w-16 h-16 bg-[#4A3728] rounded-xl border-4 border-[#78350F] flex items-center justify-center text-[9px] font-bold text-white px-1 text-center leading-tight">Anodized Bronze</div>
+                      <Text value="Dark Bronze Anodized" textStyle="PricingDetail" />
+                   </div>
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="w-16 h-16 bg-[#FFFFFF] rounded-xl border-4 border-gray-300 flex items-center justify-center text-[9px] font-bold text-black px-1 text-center leading-tight">Powder Coated RAL</div>
+                      <Text value="Satin White (or Custom RAL)" textStyle="PricingDetail" />
+                   </div>
+                </div>
+                <p className="text-[10px] text-gray-500 text-center mt-5 italic">*Warna hanya sebagai ilustrasi</p>
+              </div>
+
+              {/* Skins */}
+              <div>
+                <div className="bg-blue-600 text-white text-center py-2 rounded-md font-bold mb-6">Profile Customization</div>
+                <div className="flex justify-center items-center p-4 bg-blue border-2 border-borderLight rounded-lg">
+                   <Text value="Custom Cross-Section Dies" textStyle="PricingDetail" />
+                </div>
+                <p className="text-[10px] text-gray-500 text-center mt-5 italic">*Bentuk profil dapat disesuaikan</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side: Specifications Table */}
+          <div className="w-full xl:w-2/3 bg-light p-8 lg:p-10 rounded-[10px] border border-borderLight">
+            <h3 className="text-2xl font-bold text-blue-500 mb-8">Specifications</h3>
+            
+            <div className="flex flex-col">
+              {AluminiumExtrusionSpecifications.map((spec, index) => (
+                <div 
+                  key={index} 
+                  className="flex flex-col md:flex-row gap-2 md:gap-6 py-4 border-b border-borderLight last:border-0 hover:bg-[#2A2B30] transition-colors px-2 rounded-md"
+                >
+                  <div className="flex items-start w-full md:w-[220px] lg:w-[260px] shrink-0">
+                    <div className="font-semibold border-l-4 border-blue-600 pl-3 flex-1">
+                        <Text value={spec.label} textStyle="PricingDetail" />
+                    </div>
+                    <div className="hidden md:block text-gray-500 ml-4 mt-1">:</div>
+                  </div>
+                  
+                  <div className="w-full mt-1 md:mt-0 md:pl-6">
+                    <Text value={spec.value} textStyle="PricingDetail" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-16 items-center">
+        <ButtonLink value="Unduh Katalog Kami" href='/service' color="white" style="light" />
+      </section>
+      
     </PageTemplate>
   )
 }

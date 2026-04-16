@@ -2,7 +2,7 @@ import ButtonLink from 'components/atoms/Button/ButtonLink'
 import LineDivider from 'components/atoms/LineDivider'
 import FeatureCard from 'components/molecules/Card/FeatureCard'
 import PageSentence from 'components/molecules/PageSentence'
-import PricingCard from 'components/molecules/Card/PricingCard'
+// import PricingCard from 'components/molecules/Card/PricingCard' <- dihapus karena belum ada fungsionalitas untuk pricing, dan untuk sementara tidak diperlukan
 import ProjectCard from 'components/molecules/Card/ProjectCard'
 import SectionSentence from 'components/molecules/SectionSentence'
 import LogoList from 'components/organisms/LogoList'
