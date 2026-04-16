@@ -66,7 +66,7 @@ const Service = () => {
 
       <LineDivider />
 
-      {/* Insulated EPS Section (Replacing UI Design) */}
+      {/* EPS Panel Section */}
       <section className="w-full flex flex-col gap-10 mt-16 mb-24">
         <div className="flex flex-col xl:flex-row gap-10" data-aos="fade-up">
           
@@ -175,7 +175,7 @@ const Service = () => {
       
       <LineDivider />
 
-      {/* Insulated PUR Section (Replacing UI Design) */}
+      {/* PUR Panel Section */}
       <section className="w-full flex flex-col gap-10 mt-16 mb-24">
         <div className="flex flex-col xl:flex-row gap-10" data-aos="fade-up">
           
@@ -281,7 +281,9 @@ const Service = () => {
         </div>
       </section>
 
-      {/* Aluminium Extrusion */}
+      <LineDivider />
+
+      {/* Aluminium Extrusion Section */}
       <section className="w-full flex flex-col gap-10 mt-16 mb-24">
         <div className="flex flex-col xl:flex-row gap-10" data-aos="fade-up">
           
