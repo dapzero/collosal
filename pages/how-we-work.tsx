@@ -11,8 +11,8 @@ const HowWeWork = () => {
       <section className="grid place-items-center">
         <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 2xl:w-5/12 text-center" data-aos="zoom-in-up">
           <PageSentence
-            badge="HOW WE WORK"
-            title="We have a workflow that allows the job to be delivered well"
+            badge="Alur Kerja Kami"
+            title="Proses kerjasama dengan kami sangatlah mudah"
           />
         </div>
       </section>
@@ -30,8 +30,8 @@ const HowWeWork = () => {
         <aside className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left" data-aos="fade-up-left">
           <SectionSentence
             badge="STEP 01"
-            title={`Let's talk about your company's problems first`}
-            paragraph={"After submitting the quote form, we will review the data, then we will contact you. You can discuss with our team regarding your problem and find a solution to that problem. <br> <br> In this step, you will discuss what application to build."}
+            title={`Mari bicarakan kebutuhan Anda`}
+            paragraph={"Pada bagian ini anda menjelaskan kebutuhan dan masalah yang Anda hadapi kepada kami, lalu kami akan memberikan solusi terbaik untuk kebutuhan Anda. <br> <br> Pada tahap ini, kita akan berdiskusi dan berkomunikasi secara intensif untuk memastikan bahwa semua kebutuhan dan masalah yang Anda hadapi dapat kami pahami dengan baik."}
           />
         </aside>
       </section>
@@ -39,8 +39,8 @@ const HowWeWork = () => {
         <aside className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left" data-aos="fade-up-right">
           <SectionSentence
             badge="STEP 02"
-            title={`Doing planning, design and development until everything is finished`}
-            paragraph="When everything is agreed upon, our team will make plans related to the application that will be created. Starting from analysis, design, to development. <br> <br> In this step, the application is 100% complete."
+            title={`Menjalin kerjasama diatas kertas`}
+            paragraph="Setelah semua kebutuhan dan masalah yang Anda hadapi sudah kami pahami dengan baik, maka kita akan membuat kontrak kerjasama yang berisi semua hal yang sudah kita diskusikan sebelumnya. <br> <br> Pada tahap ini, kita akan membuat kontrak kerjasama yang berisi semua hal yang sudah kita diskusikan sebelumnya, termasuk solusi yang akan kami berikan, timeline pengerjaan, dan biaya yang harus Anda bayarkan."
           />
         </aside>
         <aside className="w-full" data-aos="fade-up-left">
@@ -66,8 +66,8 @@ const HowWeWork = () => {
         <aside className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left" data-aos="fade-up-left">
           <SectionSentence
             badge="STEP 03"
-            title={`The project is complete and we ship all the project assets, and access to the server`}
-            paragraph="We will be responsible for delivering all the project assets to you, don't worry. These assets include, design files, source code, server access, and so on. <br> <br> In this step, everything is done and the contract ends."
+            title={`Perjanjian dibuat, Proyek dimulai`}
+            paragraph="Setelah kontrak kerjasama sudah dibuat, maka pengerjaan proyek akan segera dimulai. <br> <br> Pada tahap ini, kita akan memulai proyek sesuai dengan timeline yang sudah kita buat sebelumnya, dan kami akan memberikan update secara berkala kepada Anda mengenai perkembangan proyek yang sedang kami kerjakan."
           />
         </aside>
       </section>
