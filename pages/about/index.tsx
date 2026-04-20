@@ -15,7 +15,7 @@ const About = () => {
         <aside className="w-full" data-aos="fade-down-right">
           <div className="w-full h-[480px] relative">
             <img
-              src={'/images/about-illustration.webp'}
+              src='https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247182/about-us.jpg'
               style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               alt="Programmers when coding in their laptop"
               
@@ -76,17 +76,22 @@ const About = () => {
           data-aos="zoom-in-up"
         >
           <SectionSentence
-            badge="STATISTICS"
-            title="In 3 years we reached 8 countries, 193 clients and earning $100k USD"
+            badge="STATISTIK"
+            title="Pencapaian Kami selama 3 Tahun"
           />
         </div>
+
         <div className="w-full grid gap-14">
           <div data-aos="fade-right">
             <StatisticList />
           </div>
+          {/**
           <LogoList />
+          */}
         </div>
       </section>
+
+      {/**
       <section className="grid place-items-center gap-16">
         <div
           className="sm:w-10/12 md:w-8/12 lg:w-6/12 2xl:w-5/12 text-center"
@@ -142,6 +147,8 @@ const About = () => {
           </div>
         </div>
       </section>
+      */}
+
     </PageTemplate>
   )
 }

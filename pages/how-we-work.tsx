@@ -21,7 +21,7 @@ const HowWeWork = () => {
         <aside className="w-full" data-aos="fade-up-right">
           <div className="w-full h-[410px] relative">
             <img
-              src={'/images/discuss-illustration.webp'}
+              src={'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776607646/step01.svg'}
               style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               alt='Some people discuss'
             />
@@ -46,7 +46,7 @@ const HowWeWork = () => {
         <aside className="w-full" data-aos="fade-up-left">
           <div className="w-full h-[410px] relative">
             <img
-              src={'/images/development-illustration-2.svg'}
+              src={'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776607647/step02.svg'}
               style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               alt='Development'
             />
@@ -57,7 +57,7 @@ const HowWeWork = () => {
         <aside className="w-full" data-aos="fade-up-right">
           <div className="w-full h-[410px] relative">
             <img
-              src={'/images/project-asset-illustration.svg'}
+              src={'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776607776/step03.svg'}
               style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               alt='Project Asset'
             />
