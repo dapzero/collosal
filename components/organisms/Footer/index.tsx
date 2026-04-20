@@ -2,7 +2,11 @@ import NavBrand from 'components/atoms/NavBrand'
 import NavLink from 'components/atoms/NavLink'
 import Text from 'components/atoms/Text'
 import React from 'react'
-import { FiYoutube, FiFacebook, FiInstagram } from 'react-icons/fi'
+import { FiYoutube, FiFacebook, FiInstagram, FiMapPin } from 'react-icons/fi'
+import { FaTiktok } from "react-icons/fa"
+import { IoCallOutline } from "react-icons/io5"
+import { FaQuestion } from "react-icons/fa"
+
 
 const Footer = () => {
   return (
@@ -26,31 +30,41 @@ const Footer = () => {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:gap-16 xl:gap-20">
             <div className="space-y-5">
-              <Text value="SERVICES" textStyle="FooterLinkGroupTitle" />
+              <Text value="PRODUK" textStyle="FooterLinkGroupTitle" />
               <div className="space-y-[10px]">
                 <NavLink
-                  value="Web Development"
-                  href="/service/detail"
+                  value="EPS Panel"
+                  href="/service"
                 />
                 <NavLink
-                  value="App Development"
-                  href="/service/detail"
+                  value="PUR Panel"
+                  href="/service"
                 />
-                <NavLink value="UI Design" href="/service/detail" />
-                <NavLink value="Consultation" href="/service/detail" />
-                <NavLink value="Maintenance" href="/service/detail" />
-                <NavLink value="Pricing" href="/pricing" />
+                <NavLink 
+                  value="Pintu" 
+                  href="/service" 
+                />
+                <NavLink 
+                  value="Aluminium" 
+                  href="/service" 
+                />
               </div>
             </div>
             <div className="space-y-5">
-              <Text value="COMPANY" textStyle="FooterLinkGroupTitle" />
+              <Text value="PERUSAHAAN" textStyle="FooterLinkGroupTitle" />
               <div className="space-y-[10px]">
-                <NavLink value="Tentang Kami" href="/about" />
-                <NavLink value="Hubungi Kami" href="/contact" />
-                <NavLink value="Privacy Policy" href="/privacy-policy" />
-                <NavLink value="Term of Service" href="/term-of-service" />
-                <NavLink value="Jobs" href="/jobs" />
-                <NavLink value="Blogs" href="/blog" />
+                <div className="flex items-center gap-2 text-white text-oppacity-80">
+                  <FaQuestion />
+                  <NavLink value="Tentang Kami" href="/about" />
+                </div>
+                <div className="flex items-center gap-2 text-white text-oppacity-80">
+                  <IoCallOutline />
+                  <NavLink value="Hubungi Kami" href="/contact" />
+                </div>
+                <div className="flex items-center gap-2 text-white text-oppacity-80">
+                  <FiMapPin />
+                  <NavLink value="Lokasi Kami" href="https://maps.app.goo.gl/jKyK5VRfmYaX2KeJ6" />
+                </div>
               </div>
             </div>
             <div className="space-y-5">
@@ -69,10 +83,9 @@ const Footer = () => {
                   <NavLink value="Instagram" href="https://www.instagram.com/andarumegasentosa1/" />
                 </div>
                 <div className="flex items-center gap-2 text-white text-oppacity-80">
-                  <FiInstagram />
-                  <NavLink value="LinkedIn" href="https://www.linkedin.com/company/andarumega-sentosa/" />
+                  <FaTiktok />
+                  <NavLink value="Tiktok" href="https://www.tiktok.com/@pt.andaru.mega.se/" />
                 </div>
-                  <NavLink value="Sitemap" href="/sitemap" />
               </div>
             </div>
           </div>

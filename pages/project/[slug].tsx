@@ -8,29 +8,68 @@ import React from 'react'
 // --- SIMULASI DATABASE PROYEK ---
 // Dalam implementasi nyata, data ini biasanya diambil dari API, CMS (seperti Sanity/Strapi), atau file JSON eksternal.
 const projectDatabase: Record<string, any> = {
-  'desktop-app': {
-    title: 'The Desktop App Landing Page',
-    description: 'Something has always existed. According to physics, there can never be true physical nothingness—though there can be times when existence resembles nothing.',
-    category: 'Coldstorage',
-    client: 'Nicola Tesla',
+  'kantin-parung': {
+    title: 'Proyek Kantin Parung',
+    description: '.',
+    category: 'Bangunan',
+    client: 'Parung',
     technology: 'EPS Panel',
-    heroImage: '/images/screenshots/home.png',
+    location: 'Bogor',
+    heroImage: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247171/bogor-kantin_parung-06.jpg',
     images: [
-      { src: '/images/screenshots/desktop-performance.png', caption: 'The Desktop App Landing Page - Home Screen' },
-      { src: '/images/screenshots/desktop-performance.png', caption: 'The Desktop App Landing Page - Performance' },
-      { src: '/images/screenshots/desktop-performance.png', caption: 'The Desktop App Landing Page - Features' }
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247165/bogor-kantin_parung-01.jpg', caption: 'Kantin Parung - Bagian 01' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247166/bogor-kantin_parung-02.jpg', caption: 'Kantin Parung - Bagian 02' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247168/bogor-kantin_parung-03.jpg', caption: 'Kantin Parung - Bagian 03' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247169/bogor-kantin_parung-04.jpg', caption: 'Kantin Parung - Bagian 04' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247169/bogor-kantin_parung-05.jpg', caption: 'Kantin Parung - Bagian 05' },
     ]
   },
-  'mobile-app': {
-    title: 'Mobile App Performance Dashboard',
-    description: 'A comprehensive dashboard to monitor your mobile application analytics and performance metrics in real-time.',
-    category: 'UI/UX Design',
-    client: 'TechNova Solutions',
-    technology: 'Figma, React Native',
-    heroImage: '/images/screenshots/mobile-performance.png',
+  'snack-citeureup': {
+    title: 'Proyek Pabrik Snack Citeureup',
+    description: '.',
+    category: 'Bangunan',
+    client: 'Citeureup',
+    technology: 'EPS Panel',
+    location: 'Bogor',
+    heroImage: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247153/bogor-pabrik_snack_citeureup-05.jpg',
     images: [
-      { src: '/images/screenshots/mobile-performance.png', caption: 'Dashboard Overview' },
-      { src: '/images/screenshots/mobile-performance.png', caption: 'Analytics Breakdown' }
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247149/bogor-pabrik_snack_citeureup-01.jpg', caption: 'Pabrik Snack Citeureup - Bagian 01' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247150/bogor-pabrik_snack_citeureup-02.jpg', caption: 'Pabrik Snack Citeureup - Bagian 02' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247151/bogor-pabrik_snack_citeureup-03.jpg', caption: 'Pabrik Snack Citeureup - Bagian 03' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247152/bogor-pabrik_snack_citeureup-04.jpg', caption: 'Pabrik Snack Citeureup - Bagian 04' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247154/bogor-pabrik_snack_citeureup-06.jpg', caption: 'Pabrik Snack Citeureup - Bagian 05' },
+    ]
+  },
+  'pabrik-roti': {
+    title: 'Proyek Pabrik Roti',
+    description: '.',
+    category: 'Pabrik',
+    client: 'Surya Tsabat Mandiri',
+    technology: 'EPS Panel',
+    location: 'Lampung',
+    heroImage: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247134/lampung-pabrik_roti-02.jpg',
+    images: [
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247132/lampung-pabrik_roti-01.jpg', caption: 'Pabrik Roti - Bagian 01' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247136/lampung-pabrik_roti-03.jpg', caption: 'Pabrik Roti - Bagian 02' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247139/lampung-pabrik_roti-04.jpg', caption: 'Pabrik Roti - Bagian 03' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247141/lampung-pabrik_roti-05.jpg', caption: 'Pabrik Roti - Bagian 04' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247143/lampung-pabrik_roti-06.jpg', caption: 'Pabrik Roti - Bagian 05' },
+    ]
+  },
+  'pabrik-budidaya-ikan-laut': {
+    title: 'Proyek Pabrik Budidaya Ikan Laut',
+    description: '.',
+    category: 'Pabrik',
+    client: '',
+    technology: 'EPS Panel',
+    location: 'Tangerang',
+    heroImage: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247162/tangerang-budidaya_ikan_laut-04.jpg',
+    images: [
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247159/tangerang-budidaya_ikan_laut-01.jpg', caption: 'Pabrik Budidaya Ikan Laut - Bagian 01' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247160/tangerang-budidaya_ikan_laut-02.jpg', caption: 'Pabrik Budidaya Ikan Laut - Bagian 02' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247161/tangerang-budidaya_ikan_laut-03.jpg', caption: 'Pabrik Budidaya Ikan Laut - Bagian 03' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247163/tangerang-budidaya_ikan_laut-05.jpg', caption: 'Pabrik Budidaya Ikan Laut - Bagian 04' },
+      { src: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247164/tangerang-budidaya_ikan_laut-06.jpg', caption: 'Pabrik Budidaya Ikan Laut - Bagian 05' },
     ]
   }
 }
@@ -112,18 +151,23 @@ const ProjectDetail = () => {
             {/* DESAIN BARU: Grid 2-Kolom (Bento Box Style) */}
             <div className="grid grid-cols-2 gap-y-8 gap-x-4 p-6 bg-white/[0.02] rounded-xl border border-white/5">
               <div className="flex flex-col gap-2">
-                <Text value="CATEGORY" textStyle="ProjectDetailLabel" />
+                <Text value="KATEGORI" textStyle="ProjectDetailLabel" />
                 <Text value={projectData.category} textStyle="ProjectDetailValue" />
               </div>
               
               <div className="flex flex-col gap-2">
-                <Text value="CLIENT" textStyle="ProjectDetailLabel" />
+                <Text value="KLIEN" textStyle="ProjectDetailLabel" />
                 <Text value={projectData.client} textStyle="ProjectDetailValue" />
               </div>
               
               <div className="flex flex-col gap-2 col-span-2">
-                <Text value="TECHNOLOGY" textStyle="ProjectDetailLabel" />
+                <Text value="TEKNOLOGI" textStyle="ProjectDetailLabel" />
                 <Text value={projectData.technology} textStyle="ProjectDetailValue" />
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <Text value="LOKASI" textStyle="ProjectDetailLabel" />
+                <Text value={projectData.location} textStyle="ProjectDetailValue" />
               </div>
             </div>
           </div>

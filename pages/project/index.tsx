@@ -16,37 +16,37 @@ const Project = () => {
     title: string
     description: string
     imageSrc?: string
-    category: 'all' | 'app' | 'ui-design' | 'other' // <- tambahkan field kategori pada interface Project
+    category: 'all' | 'bangunan' | 'pabrik' | 'coldstorage' | 'other' // <- tambahkan field kategori pada interface Project
   }
 
   const projectList = [
     {
-      title: 'The Mobile App Landing Page',
-      slug: 'mobile-app',
-      description: 'A landing page for mobile app',
-      imageSrc: '/images/screenshots/home.png',
-      category: 'ui-design', // <- tambahkan kategori pada setiap project
+      title: 'Proyek Kantin Parung',
+      slug: 'kantin-parung',
+      description: 'Pembangunan Kantin memakai Panel EPS',
+      imageSrc: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247171/kantin-parung-06.jpg',
+      category: 'bangunan', // <- tambahkan kategori pada setiap project
     },
     {
-      title: 'The Desktop App Landing Page',
-      slug: 'desktop-app',
-      description: 'A landing page for desktop app',
-      imageSrc: '/images/screenshots/home.png',
-      category: 'app', // <- tambahkan kategori pada setiap project
+      title: 'Proyek Pabrik Snack Citeureup',
+      slug: 'snack-citeureup',
+      description: 'Pembangunan tempat penyimpan snack memakai Panel EPS',
+      imageSrc: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247153/bogor-pabrik_snack_citeureup-05.jpg',
+      category: 'bangunan', // <- tambahkan kategori pada setiap project
     },
     {
-      title: 'Simple Mobile Blog App',
-      slug: 'simple-app',
-      description: 'A blog app on mobile platform',
-      imageSrc: '/images/screenshots/home.png',
-      category: 'app', // <- tambahkan kategori pada setiap project      
+      title: 'Proyek Pabrik Roti',
+      slug: 'pabrik-roti',
+      description: 'Pembangunan Pabrik Roti memakai Panel EPS',
+      imageSrc: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247134/lampung-pabrik_roti-02.jpg',
+      category: 'pabrik', // <- tambahkan kategori pada setiap project      
     },
     {
-      title: 'Realtime Chat App UI Design',
-      slug: 'chat-app',
-      description: 'A UI design for realtime chat app',
-      imageSrc: '/images/development-illustration.svg',
-      category: 'ui-design', // <- tambahkan kategori pada setiap project
+      title: 'Proyek Pabrik Budidaya Ikan Laut',
+      slug: 'pabrik-budidaya-ikan-laut',
+      description: 'Pembangunan Pabrik tempat Budidaya Ikan Laut memakai Panel EPS',
+      imageSrc: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247162/tangerang-budidaya_ikan_laut-04.jpg',
+      category: 'pabrik', // <- tambahkan kategori pada setiap project
     },
   ]
 
@@ -74,8 +74,9 @@ const Project = () => {
           <Select
             options={[
               { label: 'Semua Proyek', value: 'all' },
-              { label: 'App', value: 'app' },
-              { label: 'UI Design', value: 'ui-design' },
+              { label: 'Bangunan', value: 'bangunan' },
+              { label: 'Pabrik', value: 'pabrik' },
+              { label: 'Coldstorage', value: 'coldstorage' },
               { label: 'Other', value: 'other' },
             ]}
             // <- kirim nilai yang dipilih ke state
@@ -112,7 +113,7 @@ const Project = () => {
           // <- tampil pesan jika kategori kosong
           <div className="text-center py-20">
             <p className="text-gray-400 text-lg">
-              Belum ada project dalam kategori ini.
+              Belum ada proyek dalam kategori ini.
             </p>
           </div>
         )}
