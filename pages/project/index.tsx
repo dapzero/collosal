@@ -6,6 +6,7 @@ import ProjectCard from 'components/molecules/Card/ProjectCard'
 import PageTemplate from 'components/templates/PageTemplate'
 import React, { useState } from 'react'
 import randomString from 'utils/randomString'
+import Link from 'next/link' // <- Import Link dari Next.js
 
 const Project = () => {
   // <- State untuk menyimpan kategori yang dipilih
@@ -18,27 +19,31 @@ const Project = () => {
     category: 'all' | 'app' | 'ui-design' | 'other' // <- tambahkan field kategori pada interface Project
   }
 
-  const projectList: Project[] = [
+  const projectList = [
     {
       title: 'The Mobile App Landing Page',
+      slug: 'mobile-app',
       description: 'A landing page for mobile app',
       imageSrc: '/images/screenshots/home.png',
       category: 'ui-design', // <- tambahkan kategori pada setiap project
     },
     {
       title: 'The Desktop App Landing Page',
+      slug: 'desktop-app',
       description: 'A landing page for desktop app',
       imageSrc: '/images/screenshots/home.png',
       category: 'app', // <- tambahkan kategori pada setiap project
     },
     {
       title: 'Simple Mobile Blog App',
+      slug: 'simple-app',
       description: 'A blog app on mobile platform',
       imageSrc: '/images/screenshots/home.png',
       category: 'app', // <- tambahkan kategori pada setiap project      
     },
     {
       title: 'Realtime Chat App UI Design',
+      slug: 'chat-app',
       description: 'A UI design for realtime chat app',
       imageSrc: '/images/development-illustration.svg',
       category: 'ui-design', // <- tambahkan kategori pada setiap project
@@ -81,18 +86,24 @@ const Project = () => {
           />
         </aside>
       </section>
+
       <LineDivider />
+      
       <section className="grid place-items-center gap-16">
         {filtered.length > 0 ? (
           <div className="w-full grid grid-cols-1 gap-y-16 sm:grid-cols-2 sm:gap-x-5">
             {filtered.map((project) => {
               return (
-                <div className="basis-full lg:basis-1/2" key={randomString(64)} data-aos="zoom-in-up">
-                  <ProjectCard
-                    title={project.title}
-                    description={project.description}
-                    imageSrc={project.imageSrc}
-                  />
+                <div className="basis-full lg:basis-1/2" key={project.slug} data-aos="zoom-in-up">
+                  <Link href={`/project/${project.slug}`}>
+                    <div className="cursor-pointer transition-transform hover:scale-105">
+                      <ProjectCard
+                        title={project.title}
+                        description={project.description}
+                        imageSrc={project.imageSrc}
+                      />
+                    </div>
+                  </Link>
                 </div>
               )
             })}

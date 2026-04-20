@@ -34,6 +34,7 @@ const ProjectCard = ({
         <div className="mb-9">
           <Text value={description} textStyle="ProjectDescription" />
         </div>
+        {/* Remove Button Link (Detail) di /pages/project
         <div className="">
           <ButtonLink
             value="Detail"
@@ -43,6 +44,7 @@ const ProjectCard = ({
             href="/project/detail"
           />
         </div>
+        */ }
       </div>
     </div>
   )
