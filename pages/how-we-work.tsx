@@ -23,7 +23,7 @@ const HowWeWork = () => {
             <img
               src={'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776607646/step01.svg'}
               style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-              alt='Some people discuss'
+              alt='diskusi dengan seseorang'
             />
           </div>
         </aside>
@@ -48,7 +48,7 @@ const HowWeWork = () => {
             <img
               src={'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776607647/step02.svg'}
               style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-              alt='Development'
+              alt='pembuatan kontrak kerja'
             />
           </div>
         </aside>
@@ -59,7 +59,7 @@ const HowWeWork = () => {
             <img
               src={'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776607776/step03.svg'}
               style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-              alt='Project Asset'
+              alt='hasil akhir'
             />
           </div>
         </aside>

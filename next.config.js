@@ -9,6 +9,7 @@ const nextConfig = {
     path: '',
   },
   trailingSlash: true,
+  allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev', '*.cs-asia-southeast1-seal.cloudshell.dev'],
 }
 
-module.exports = nextConfig
+module.exports = nextConfig 

@@ -84,8 +84,8 @@ const Service = () => {
             {/* Product Image Placeholder */}
             <div className="w-full relative h-[250px] bg-light rounded-[10px] border border-borderLight flex items-center justify-center p-4">
                 <img
-                    src={'/images/EPS-PRODUCT.svg'} // Ganti dengan path gambar produk yang sebenarnya
-                    alt="Insulated EPS Panel"
+                    src={'/images/produk-panel-eps.svg'} // Ganti dengan path gambar produk yang sebenarnya
+                    alt="Panel EPS"
                     className="w-full h-full object-contain"
                 />
             </div>
@@ -193,8 +193,8 @@ const Service = () => {
             {/* Product Image Placeholder */}
             <div className="w-full relative h-[250px] bg-light rounded-[10px] border border-borderLight flex items-center justify-center p-4">
                 <img
-                    src={'/images/PUR-PRODUCT.svg'} // Ganti dengan path gambar produk yang sebenarnya
-                    alt="Insulated PUR Panel"
+                    src={'/images/produk-panel-pur.svg'} // Ganti dengan path gambar produk yang sebenarnya
+                    alt="Panel PUR"
                     className="w-full h-full object-contain"
                 />
             </div>
@@ -315,30 +315,38 @@ const Service = () => {
                 <div className="bg-blue-600 text-white text-center py-2 rounded-md font-bold mb-6">
                   Color
                 </div>
-                <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="grid grid-cols-1 gap-4 text-center">
                    <div className="flex flex-col items-center gap-3">
                       <div className="w-16 h-16 bg-[#E5E7EB] rounded-xl border-4 border-gray-400 flex items-center justify-center text-[9px] font-bold text-black px-1 text-center leading-tight">Anodized Clear</div>
                       <Text value="Clear Natural Anodized" textStyle="PricingDetail" />
                    </div>
-                   <div className="flex flex-col items-center gap-3">
-                      <div className="w-16 h-16 bg-[#4A3728] rounded-xl border-4 border-[#78350F] flex items-center justify-center text-[9px] font-bold text-white px-1 text-center leading-tight">Anodized Bronze</div>
-                      <Text value="Dark Bronze Anodized" textStyle="PricingDetail" />
-                   </div>
-                   <div className="flex flex-col items-center gap-3">
-                      <div className="w-16 h-16 bg-[#FFFFFF] rounded-xl border-4 border-gray-300 flex items-center justify-center text-[9px] font-bold text-black px-1 text-center leading-tight">Powder Coated RAL</div>
-                      <Text value="Satin White (or Custom RAL)" textStyle="PricingDetail" />
-                   </div>
+                   
                 </div>
                 <p className="text-[10px] text-gray-500 text-center mt-5 italic">*Warna hanya sebagai ilustrasi</p>
               </div>
 
               {/* Skins */}
               <div>
-                <div className="bg-blue-600 text-white text-center py-2 rounded-md font-bold mb-6">Profile Customization</div>
-                <div className="flex justify-center items-center p-4 bg-blue border-2 border-borderLight rounded-lg">
-                   <Text value="Custom Cross-Section Dies" textStyle="PricingDetail" />
+                <div className="bg-blue-600 text-white text-center py-2 rounded-md font-bold mb-6">
+                  Profile Customization
                 </div>
-                <p className="text-[10px] text-gray-500 text-center mt-5 italic">*Bentuk profil dapat disesuaikan</p>
+                <div className="flex justify-center gap-12 text-center">
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="w-20 h-14 bg-blue border-2 border-borderLight rounded-lg flex flex-col justify-center items-center gap-[6px]">
+                        {/* Example of left Skin Profile */}
+                      </div>
+                      <Text value="Example" textStyle="PricingDetail" />
+                   </div>
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="w-20 h-14 bg-blue border-2 border-borderLight rounded-lg flex flex-col justify-center items-center gap-1">
+                        <svg className="w-12 h-6 text-gray-400" viewBox="0 0 48 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="miter">
+                          {/* Example of right Skin Profile */}
+                        </svg>
+                      </div>
+                      <Text value="Example" textStyle="PricingDetail" />
+                   </div>
+                </div>
+                <p className="text-[10px] text-gray-500 text-center mt-5 italic">*Garis hanya sebagai ilustrasi</p>
               </div>
             </div>
           </div>
@@ -371,7 +379,7 @@ const Service = () => {
       </section>
 
       <section className="flex flex-col gap-16 items-center">
-        <ButtonLink value="Unduh Katalog Kami" href='/service' color="white" style="light" />
+        <ButtonLink value="Unduh Katalog Kami" href='https://drive.google.com/file/d/16LXjnMPrbSghsXCAY6SgyL5oVD-QZPsd/view?usp=drive_link' color="white" style="light" target="_blank" />
       </section>
       
     </PageTemplate>

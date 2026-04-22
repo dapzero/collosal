@@ -1,11 +1,11 @@
 import LineDivider from 'components/atoms/LineDivider'
-import TeamCard from 'components/molecules/Card/TeamCard'
+// import TeamCard from 'components/molecules/Card/TeamCard' <- module tidak terpakai
 import PageSentence from 'components/molecules/PageSentence'
 import SectionSentence from 'components/molecules/SectionSentence'
-import LogoList from 'components/organisms/LogoList'
+// import LogoList from 'components/organisms/LogoList' <- module tidak terpakai
 import StatisticList from 'components/organisms/StatisticList'
 import PageTemplate from 'components/templates/PageTemplate'
-// import Image from 'next/image' #versi sebelummnya
+// import Image from 'next/image' <- module tidak terpakai, alternative-nya memakai class <img>
 import React from 'react'
 
 const About = () => {
@@ -17,7 +17,7 @@ const About = () => {
             <img
               src='https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247182/about-us.jpg'
               style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-              alt="Programmers when coding in their laptop"
+              alt="Album foto karyawan andaru mega sentosa"
               
             />
           </div>
@@ -77,7 +77,7 @@ const About = () => {
         >
           <SectionSentence
             badge="STATISTIK"
-            title="Pencapaian Kami selama 3 Tahun"
+            title="Pencapaian Kami selama 4 Tahun"
           />
         </div>
 
