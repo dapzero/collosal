@@ -24,7 +24,7 @@ const Project = () => {
       title: 'Proyek Kantin Parung',
       slug: 'kantin-parung',
       description: 'Pembangunan Kantin memakai Panel EPS',
-      imageSrc: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247171/kantin-parung-06.jpg',
+      imageSrc: 'https://res.cloudinary.com/dsk1jyfib/image/upload/q_auto/f_auto/v1776247171/bogor-kantin_parung-06.jpg',
       category: 'bangunan', // <- tambahkan kategori pada setiap project
     },
     {

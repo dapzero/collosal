@@ -1,6 +1,6 @@
-import NavBrand from 'components/atoms/NavBrand'
+// import NavBrand from 'components/atoms/NavBrand' <- module tidak terpakai
 import Text from 'components/atoms/Text'
-// import Image from 'next/image' #versi sebelummnya
+// import Image from 'next/image' <- module tidak terpakai, alternative-nya memakai class <img>
 import React from 'react'
 import { FiFacebook, FiLinkedin, FiTwitter } from 'react-icons/fi'
 interface BlogAuthorCardProps {

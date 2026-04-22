@@ -39,25 +39,33 @@ const TestimonialList = () => {
       >
         <SwiperSlide className='mt-10'>
           <TestimonialCard
-            avatarSrc="/images/testimonial-avatar.png"
-            name="Esther Howard"
-            company="Abstergo Ltd."
+            avatarSrc="/images/avatar-male.svg"
+            name="Nama"
+            company="Perusahaan"
             testimony={`"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."`}
           />
         </SwiperSlide>
         <SwiperSlide className='mt-10'>
           <TestimonialCard
-            avatarSrc="/images/testimonial-avatar-2.png"
-            name="Esther Howard"
-            company="Abstergo Ltd."
+            avatarSrc="/images/avatar-female.svg"
+            name="Nama"
+            company="Perusahaan"
             testimony={`"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."`}
           />
         </SwiperSlide>
         <SwiperSlide className='mt-10'>
           <TestimonialCard
-            avatarSrc="/images/testimonial-avatar-3.png"
-            name="Esther Howard"
-            company="Abstergo Ltd."
+            avatarSrc="/images/avatar-male.svg"
+            name="Nama"
+            company="Perusahaan"
+            testimony={`"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."`}
+          />
+        </SwiperSlide>
+        <SwiperSlide className='mt-10'>
+          <TestimonialCard
+            avatarSrc="/images/avatar-female.svg"
+            name="Nama"
+            company="Perusahaan"
             testimony={`"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."`}
           />
         </SwiperSlide>
