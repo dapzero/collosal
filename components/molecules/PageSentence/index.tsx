@@ -5,12 +5,14 @@ interface SectionSentenceProps {
   title?: string
   description?: string
   badgeStyle?: 'success' | 'error'
+  isH1?: boolean
 }
 const PageSentence = ({
   title = '',
   description = '',
   badge = '',
   badgeStyle = 'success',
+  isH1 = false,
 }: SectionSentenceProps) => {
   return (
     <article className={`space-y-6`}>
@@ -28,7 +30,7 @@ const PageSentence = ({
               }
             />
           )}
-          {title == '' ? '' : <Text value={title} textStyle="PageTitle" />}
+          {title == '' ? '' : isH1 ? <h1><Text value={title} textStyle="PageTitle" /></h1> : <Text value={title} textStyle="PageTitle" />}
         </div>
       )}
       {description == '' ? (

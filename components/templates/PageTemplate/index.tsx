@@ -8,13 +8,27 @@ import useGetBrowserName from 'hooks/useGetBrowserName'
 interface PageTemplateProps {
   children: ReactNode[] | JSX.Element
   title?: string
+  description?: string
+  ogImage?: string
+  canonical?: string
 }
-const PageTemplate = ({ children, title = 'Collosal' }: PageTemplateProps) => {
+const PageTemplate = ({ children, title = 'Collosal', description, ogImage, canonical }: PageTemplateProps) => {
   const browserName = useGetBrowserName()
   return (
     <>
       <Head>
         <title>{title}</title>
+        {description && <meta name="description" content={description} />}
+        {canonical && <link rel="canonical" href={canonical} />}
+        {ogImage && <meta property="og:image" content={ogImage} />}
+        {description && <meta property="og:description" content={description} />}
+        <meta property="og:title" content={title} />
+        <meta property="og:type" content="website" />
+        {canonical && <meta property="og:url" content={canonical} />}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        {description && <meta name="twitter:description" content={description} />}
+        {ogImage && <meta name="twitter:image" content={ogImage} />}
       </Head>
       {/* Navbar Fixed on top */}
       <NavBar />

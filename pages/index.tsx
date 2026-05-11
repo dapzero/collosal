@@ -20,7 +20,12 @@ import { GiElectric } from "react-icons/gi";
 const Home = () => {
   return (
     <>
-      <PageTemplate title="Home - Collosal">
+      <PageTemplate
+        title="Professional Sandwich Panel Design, Fabrication & Installation - Collosal"
+        description="Expert sandwich panel design, manufacturing, and installation solutions for commercial and industrial construction. Precision engineering for durable, energy-efficient buildings."
+        canonical="https://collosal.com/"
+        ogImage="/images/og-image.jpg"
+      >
         {/* Banner Section */}
         <section
           className="flex flex-col gap-10 items-center"
@@ -31,6 +36,7 @@ const Home = () => {
               title="Kami Merancang. Kami Membangun. Kami Mewujudkan."
               description="Kami PT Andaru Mega Sentosa adalah perusahaan spesialis sandwich panel yang menghadirkan solusi konstruksi terintegrasi. Dengan menggabungkan desain presisi, proses manufaktur berkualitas, dan tim pemasangan ahli, kami memastikan bangunan Anda kokoh, efisien, dan estetis."
               badge="DESAIN-PEMBANGUNAN-INSTALASI"
+              isH1={true}
             />
           </div>
           <div className="flex flex-col gap-6 sm:flex-row w-full sm:w-fit">
